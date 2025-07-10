@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  zombie:
+    container_name: zombie
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "44444:80"

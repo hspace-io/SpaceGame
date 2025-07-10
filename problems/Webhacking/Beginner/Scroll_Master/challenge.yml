@@ -1,0 +1,12 @@
+name: Scroll_Master
+category: web
+difficulty: beginner
+cpu_spec: 1 
+mem_spec: 512 
+port: 12312
+
+description: Inspired by Click Master, I created Scroll Master. Please continue scrolling the mouse.
+
+flag: hspace{wOw_ScrO1l_m4ST3r}
+chall_dir: web-Scroll_Master
+compose_file: web-Scroll_Master/prob/for_organizer/docker-compose.yml

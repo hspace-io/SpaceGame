@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  web-whitespade:
+    build: .
+    image: "whitespade"
+    ports:
+      - "28000:8080"

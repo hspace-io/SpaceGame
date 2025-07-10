@@ -1,0 +1,14 @@
+name: hello-proxy
+
+services:
+  app:
+    build: app
+    env_file: .env
+  varnish:
+    build: varnish
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+  memcached:
+    image: memcached:alpine

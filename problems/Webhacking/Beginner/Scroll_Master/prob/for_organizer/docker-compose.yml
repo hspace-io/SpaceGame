@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  scroll_master:
+    container_name: scroll_master
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "12312:80"

@@ -1,0 +1,13 @@
+name: Exec Anything
+category: Web
+
+difficulty: Easy
+cpu_spec: 1
+mem_spec: 512
+port: 8000
+
+description: Execute anything you want!
+
+flag: hspace{7d3132494e5ba4a0cea74ecc8a3495caa1ea7299c238896d4d1491bbfa4fb796}
+chall_dir: web-execanything
+compose_file: web-execanything/prob/for_organizer/docker-compose.yml

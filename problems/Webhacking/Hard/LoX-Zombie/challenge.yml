@@ -1,0 +1,12 @@
+name: LoX-Zombie
+category: web
+difficulty: hard
+cpu_spec: 1 
+mem_spec: 512 
+port: 44444
+
+description: Lord of XSleak - Zombie  Let's save the world from zombies
+
+flag: hspace{a_leaKeD_zomBi3}
+chall_dir: web-LoX-Zombie
+compose_file: web-LoX-Zombie/prob/for_organizer/docker-compose.yml

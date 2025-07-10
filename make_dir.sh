@@ -10,6 +10,7 @@ for top in "${top_dirs[@]}"; do
   for sub in "${category[@]}"; do
     mkdir -p "$top/$sub"
     for difficulty in "${Difficulty[@]}"; do
-      mkdir -p "$top/$sub/$difficulty" 
+      mkdir -p "$top/$sub/$difficulty"
+    done
   done
 done

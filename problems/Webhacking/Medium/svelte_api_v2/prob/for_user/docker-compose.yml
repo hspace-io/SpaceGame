@@ -1,0 +1,7 @@
+name: svelte_api_v2
+
+services:
+  web:
+    build: .
+    ports:
+      - "49614:3000"

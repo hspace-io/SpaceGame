@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>장바구니</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">상품</th>
+          <th scope="col">가격</th>
+          <th scope="col">수량</th>
+          <th scope="col">총액</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="products">
+      </tbody>
+    </table>
+    <div class="text-end">
+      <h5>총액: $0</h5>
+      <button class="btn btn-primary" id="paymentButton">결제하기</button>
+    </div>
+  </div>
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-3 border-0 shadow-lg">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fw-bold" id="paymentModalLabel">결제 확인</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="paymentModalBody">
+          <div class="text-center mb-4">
+            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+          </div>
+          <p class="fs-5 text-center mb-4">결제하시겠습니까?</p>
+          <p class="text-center">주문 번호: <strong id="orderNumber">#SPACE-</strong></p>
+          <p class="text-center">결제 금액: <strong id="paymentAmount">$100</strong></p>
+        </div>
+        <div class="modal-footer bg-light border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary" id="paymentConfirm">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="paymentCompleteModal" tabindex="-1" aria-labelledby="paymentCompleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-3 border-0 shadow-lg">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title fw-bold" id="paymentCompleteModalLabel">결제 완료</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-4">
+            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+          </div>
+          <p class="fs-5 text-center mb-4">결제가 성공적으로 완료되었습니다.</p>
+          <p class="fs-5 text-center mb-4" id="thanksalot">구매해주셔서 감사합니다.</p>
+        </div>
+        <div class="modal-footer bg-light border-0">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="paymentCompleteConfirm">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script id="__PRODUCT_DATA__" type="application/json">{"products":[{"title":"strawberry_jelly","display_name":"스트로베리 젤리","price":10},{"title":"lemon_jelly","display_name":"레몬 젤리","price":15},{"title":"orange_jelly","display_name":"오렌지 젤리","price":20},{"title":"lime_jelly","display_name":"라임 젤리","price":25}]}</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async ()=>{
+      function deepFreeze(a) {
+        Object.keys(a).forEach(c => {if (typeof a[c] == 'object' && a[c] !== null && a.hasOwnProperty(c)) deepFreeze(a[c]);});
+        return Object.freeze(a);
+      }
+      const product = JSON.parse(document.getElementById("__PRODUCT_DATA__").textContent).products;
+      for (var i = product.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [product[i], product[j]] = [product[j], product[i]];
+      }
+      deepFreeze(product);
+      product.forEach((c)=>{
+        let newTr = document.createElement("tr");
+        let newTh = document.createElement("th");
+        newTh.setAttribute("scope", "row");
+        newTh.textContent = product.indexOf(c) + 1;
+        newTr.appendChild(newTh);
+        let newTd = document.createElement("td");
+        newTd.textContent = c.display_name;
+        newTr.appendChild(newTd);
+        newTd = document.createElement("td");
+        newTd.textContent = `$${c.price}`;
+        newTr.appendChild(newTd);
+        newTd = document.createElement("td");
+        let newInput = document.createElement("input");
+        newInput.setAttribute("type", "number");
+        newInput.setAttribute("value", "0");
+        newInput.setAttribute("min", "0");
+        newInput.setAttribute("class", "form-control");
+        newInput.setAttribute("id", `product_${product.indexOf(c)}`);
+        newInput.setAttribute("product", c.title);
+        newTd.appendChild(newInput);
+        newTr.appendChild(newTd);
+        newTd = document.createElement("td");
+        newTd.textContent = `$0`;
+        newTr.appendChild(newTd);
+        newTd = document.createElement("td");
+        let newButton = document.createElement("button");
+        newButton.setAttribute("class", "btn btn-danger");
+        newButton.textContent = "삭제";
+        newTd.appendChild(newButton);
+        newTr.appendChild(newTd);
+        document.getElementById("products").appendChild(newTr);
+      })
+      let inputs = document.querySelectorAll("input");
+      inputs.forEach((c)=>{
+        c.addEventListener("change", ()=>{
+          let price = product.find((d)=>d.title === c.getAttribute("product"));
+          var urlParams = new URLSearchParams(window.location.search);
+          urlParams.set(price.title, c.value);
+          price = price.price;
+          c.parentElement.nextElementSibling.textContent = `$${price * c.value}`;
+          let total = 0;
+          inputs.forEach((d)=>{
+            let price = product.find((e)=>e.title === d.getAttribute("product")).price;
+            total += price * d.value;
+          })
+          document.querySelector("h5").textContent = `총액: $${total}`;
+          urlParams.delete("total");
+          urlParams.set("total", total);
+          let newUrl=window.location.href.split('?')[0] + '?' + urlParams.toString();
+          window.history.pushState({ path: newUrl }, '', newUrl);
+        })
+      })
+      let paymentButton = document.getElementById("paymentButton");
+      paymentButton.addEventListener("click", ()=>{
+        var urlParams = new URLSearchParams(window.location.search);
+        let total = urlParams.get("total");
+        if (total === null) return alert("상품을 선택해주세요.");
+        let paymentBody = document.getElementById("paymentModalBody");
+        paymentBody.children[2].children[0].textContent = `#HSPACE-${Math.floor(Math.random() * 1000000)}`;
+        paymentBody.children[3].children[0].textContent = `$${total}`;
+        let modal=new bootstrap.Modal(document.getElementById("paymentModal"));
+        document.getElementById("paymentConfirm").addEventListener("click", ()=>{
+          modal.hide();
+          let modal1=new bootstrap.Modal(document.getElementById("paymentCompleteModal"))
+          paymentCompleteConfirm.addEventListener("click", ()=>{
+            modal1.hide();
+            window.location.href = "/";
+          })
+          fetch('/order', {
+            method: 'POST',
+            body: JSON.stringify({total:total}),
+            headers: {'Content-Type': 'application/json'}
+          }).then(async response => {
+            if (response.ok) thanksalot.innerHTML = await response.text();
+            else thanksalot.innerHTML = "결제에 실패했습니다.";
+          }).catch(error => {
+            thanksalot.innerHTML = "결제할 수 없습니다 다시 시도하세요.";
+          })
+          modal1.show();
+        })
+        modal.show();
+      })
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

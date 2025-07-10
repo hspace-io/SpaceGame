@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    php_exec:
+        container_name: php_exec
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "8080:80"

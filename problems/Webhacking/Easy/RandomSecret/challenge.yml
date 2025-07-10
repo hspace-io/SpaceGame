@@ -1,0 +1,11 @@
+name: RandomSecret 
+category: web 
+difficulty: easy 
+cpu_spec: 1 
+mem_spec: 512 
+port: 4000
+description: Even if the secret key is leaked, wouldn't it be okay if it keeps changing?
+
+flag: hspace{Th3_s3cret_key_Mu5t_nOT_Be_le4KeD!!!} 
+chall_dir: web-RandomSecret
+Dockerfile: web-RandomSecret/for_organizer/dockerfile
