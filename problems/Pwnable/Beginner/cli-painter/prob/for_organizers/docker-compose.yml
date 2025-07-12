@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    cli-painter:
+        container_name: cli-painter
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "39393:39393"

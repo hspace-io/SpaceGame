@@ -1,0 +1,10 @@
+name: benchmark
+category: pwn
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 30300
+description: Test your pc real quick :-)
+flag: hspace{e604b31c05e0ed5ab9dac59a613eb309}
+chall_dir: benchmark
+compose_file: prob/for_organizer/docker-compose.yml

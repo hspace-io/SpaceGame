@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+    hspaceeth:
+        build:
+            context: ./
+        ports:
+            - "30031:1337"
+        restart: always

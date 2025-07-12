@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    hspace_note:
+        container_name: hspace_babynote
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "11111:11111"

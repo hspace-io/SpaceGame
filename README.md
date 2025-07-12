@@ -34,6 +34,7 @@
 | Pwnable    | Hard       | hspaceETH             | [problem][hspaceETH prob], [solution][hspaceETH sol]                         | 30031        | o      | 2024년 5월 #2 |
 | Pwnable    | Hard       | lottery               | [problem][lottery prob], [solution][lottery sol]                             | 15252, 15353 | o      | 2024년 4월 #1 |
 | Pwnable    | Hard       | system_vuln           | [problem][system_vuln prob], [solution][system_vuln sol]                     | 15252        | o      | 2024년 6월 #1 |
+| Reversing  | Beginner   | ah...?                | [prob][ah...? prob] [sol][ah...? sol]                                        | 2346         | x      | 2024년 6월 #1 |
 
 
 
@@ -133,6 +134,9 @@
 [system_vuln prob]: ./problems/Pwnable/Hard/system_vuln
 [system_vuln sol]: ./solutions/Pwnable/Hard/system_vuln
 
+[ah...? prob]: ./problems/Reversing/Beginner/ah,,,?
+[ah...? sol]: ./solutions/Reversing/Beginner/ah,,,?
+<!-- . -> , -->
 
 
 [asdf prob]: http://google.com

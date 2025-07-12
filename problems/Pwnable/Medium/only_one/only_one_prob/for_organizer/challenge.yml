@@ -1,0 +1,11 @@
+name: only_one
+category: pwn
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 31337
+description: |
+  you have only one chance!
+chall_dir: only_one
+flag: hspace{120f8f9pbui357u8q9djnefjwio8fs7d9sg6a0n78gfv45}
+compose_file: only_one/for_organizer/docker-compose.yml

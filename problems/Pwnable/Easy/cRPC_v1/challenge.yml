@@ -1,0 +1,13 @@
+name: cRPC v1
+category: pwn
+
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 18181
+
+description: is it gRPC? nop! cRPC!
+
+flag: hspace{leT5_pwN_gRPC_For_PWN2OPWN}
+chall_dir: pwn-cRPCv1
+compose_file: pwn-cRPCv1/prob/for_organizer/docker-compose.yml

@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    open_read_write:
+      build: .
+      ports:
+        - "10101:10101"
+
+

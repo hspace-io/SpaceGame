@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    dsarrrgh:
+        container_name: bxorf
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "12345:12345"

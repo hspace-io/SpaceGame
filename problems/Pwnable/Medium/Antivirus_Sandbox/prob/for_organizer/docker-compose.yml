@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    antivirus_sanbox:
+        container_name: antivirus_sanbox
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "11111:11111"

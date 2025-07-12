@@ -1,0 +1,12 @@
+name: open_read_write
+category: pwn
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 10101
+description: Yeah, it's just common ORW challenge, but the name of flag file will be changed every run! zzlol. 
+  (in directory, there is N files and 1 flag. every file name is made by `hexlify(os.urandom(16)).decode()` on python but path of flag is `hexlify(os.urandom(16)).decode()/hexlify(os.urandom(16)).decode()`. let's find the flag!)
+  nc (server) (port)
+flag: hspace{S05ry_t0_b0th3r_y0u..f0rg1v3_m3_pl3as3} 
+chall_dir: open_read_write
+compose_file: open_read_write/for_organizer/docker-compose.yml

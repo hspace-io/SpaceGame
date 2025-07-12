@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    crpc-v1:
+        container_name: crpc-v1
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "18181:18181"

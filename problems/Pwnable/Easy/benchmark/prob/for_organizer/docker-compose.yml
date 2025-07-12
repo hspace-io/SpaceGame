@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+    benchmark:
+        build:
+            context: ./
+        ports:
+            - "30030:1337"
+        restart: always

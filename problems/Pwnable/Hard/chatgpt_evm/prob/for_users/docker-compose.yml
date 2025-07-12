@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    chatgpt-evm:
+        container_name: chatgpt-evm
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "19191:19191"

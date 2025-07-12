@@ -1,0 +1,13 @@
+name: hspace_babynote
+category: pwn
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 11111
+
+description: Yet Another Note Chall
+
+flag: hspace{64b4e0c2d5d08e692b1a31122c38452f39a2765d1f29a122d8648af1fd6d7d0e}
+chall_dir: pwn-hspace_babynote
+compose_file: pwn-hspace_babynote/prob/for_organizer/docker-compose.yml

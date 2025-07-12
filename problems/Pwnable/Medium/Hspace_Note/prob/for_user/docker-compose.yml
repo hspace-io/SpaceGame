@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    hspace_note:
+        container_name: hspace_note
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "11112:11112"

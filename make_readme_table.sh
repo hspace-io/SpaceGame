@@ -1,7 +1,7 @@
 #!/bin/bash
 
-input_file="readme_test.md"
-output_file="output.md"
+input_file="table_sample.md"
+output_file="table.md"
 link_defs="links.md"
 
 > "$output_file"

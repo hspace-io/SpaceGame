@@ -1,0 +1,15 @@
+name: cli-painter
+category: pwn
+
+difficulty: beginner
+cpu_spec: 1
+mem_spec: 512
+port: 39393
+
+description: paint anything! ( move - wasd, paint/unpaint - space ).
+  connect with `stty raw -echo; nc (server) (port)` to skip enter. 
+  If you get shell, enter this command on server to get output `stty raw -echo`
+
+flag: hspace{enjoy_my_hspace_logo_:>}
+chall_dir: pwn-cli-painter
+compose_file: pwn-cli-painter/prob/for_organizer/docker-compose.yml

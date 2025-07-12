@@ -1,0 +1,11 @@
+name: ez_vm
+category: pwn
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 31337
+description: |
+  vm is very simple but..
+chall_dir: ez_vm
+flag: hspace{ez137489efih375ftyie74gg43h849}
+compose_file: ez_vm/for_organizer/docker-compose.yml

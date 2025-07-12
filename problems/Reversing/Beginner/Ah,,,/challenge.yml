@@ -1,0 +1,14 @@
+name: Ah..?
+category: 
+crypto
+rev
+
+difficulty: beginner
+cpu_spec: 1
+mem_spec: 512
+port: 2346
+
+description: Ah..... What?
+
+flag: hspace{H3llo_World_Hell0_Aheui}
+chall_dir: rev-ah
