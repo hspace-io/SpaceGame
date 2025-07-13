@@ -34,10 +34,10 @@
 | Pwnable      | Hard         | hspaceETH              | [problem][hspaceETH prob], [solution][hspaceETH sol]                         | 30031        | o      | 2024년 5월 #2 |
 | Pwnable      | Hard         | lottery                | [problem][lottery prob], [solution][lottery sol]                             | 15252, 15353 | o      | 2024년 4월 #1 |
 | Pwnable      | Hard         | system_vuln            | [problem][system_vuln prob], [solution][system_vuln sol]                     | 15252        | o      | 2024년 6월 #1 |
-| Reversing    | Beginner     | Ah...?                 | [prob][Ah...? prob] [sol][Ah...? sol]                                        | 2346         | x      | 2024년 6월 #1 |
-| Reversing    | Medium       | sigvm                  | [prob][sigvm prob] [sol][sigvm sol]                                          |              | X      | 2024년 4월 #1 |
-| Reversing    | Medium       | Chip VM                | [prob][Chip VM prob] [sol][Chip VM sol]                                      |              | X      | 2024년 4월 #1 |
-| Reversing    | Hard         | Verwandeltes Labyrinth | [prob][Verwandeltes Labyrinth prob] [sol][Verwandeltes Labyrinth sol]        | x            | X      | 2024년 4월 #1 |
+| Reversing    | Beginner     | Ah...?                 | [problem][Ah...? prob] [solution][Ah...? sol]                                        | 2346         | x      | 2024년 6월 #1 |
+| Reversing    | Medium       | sigvm                  | [problem][sigvm prob] [solution][sigvm sol]                                          |              | X      | 2024년 4월 #1 |
+| Reversing    | Medium       | Chip VM                | [problem][Chip VM prob] [solution][Chip VM sol]                                      |              | X      | 2024년 4월 #1 |
+| Reversing    | Hard         | Verwandeltes Labyrinth | [problem][Verwandeltes Labyrinth prob] [solution][Verwandeltes Labyrinth sol]        | x            | X      | 2024년 4월 #1 |
 | Cryptography | Beginner     | quadratic function     | [problem][quadratic function prob] [solution][quadratic function sol]        | x            | X      | 2024년 4월 #1 |
 | Cryptography | Easy         | NAEDILCUE              | [problem][NAEDILCUE prob] [solution][NAEDILCUE sol]                          | x            | null   | 2024년 4월 #1 |
 | Cryptography | Easy         | GP                     | [problem][GP prob] [solution][GP sol]                                        | x            | X      | 2024년 6월 #1 |
