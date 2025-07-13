@@ -1,0 +1,13 @@
+name: SquRSA_xx 
+category: crypto
+
+difficulty: Medium
+cpu_spec: null 
+mem_spec: null
+port: null
+
+description: Let's expand the expression...!
+
+flag: hspace{oRderEd_PrimE_eQu4res_Rs4_arE_y0u_A_m4ste1_Of_e9uAti0n_Man1pu1at1oN?}
+chall_dir: crypto-SquRSA_xx 
+compose_file: null 

@@ -1,0 +1,7 @@
+name: sigvm
+category: rev
+difficulty: medium
+description: Where is main loop?! 
+flag: hspace{3XCe113N7_jUmp!}
+chall_dir: sigvm
+compose_file:

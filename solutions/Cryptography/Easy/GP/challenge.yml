@@ -1,0 +1,12 @@
+name: GP
+category: crypto
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+
+description: basic math problem :)
+
+flag: hspace{d0_you_reMemBer_geOmEtr1c_s3quEnCE???___:)}
+chall_dir: crypto-GP
+compose_file: docker-compose.yml

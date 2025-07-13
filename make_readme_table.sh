@@ -16,7 +16,7 @@ while IFS= read -r line; do
     field_name=$(echo "${fields[3]}" | xargs)
 
     if [[ -n "$field_name" ]]; then
-      link_text="[prob][${field_name} prob] [sol][${field_name} sol]"
+      link_text="[problem][${field_name} prob] [solution][${field_name} sol]"
       fields[4]=" $link_text "
 
       new_line=$(IFS='|'; echo "${fields[*]}")
@@ -34,3 +34,6 @@ while IFS= read -r line; do
 done < "$input_file"
 
 cat "$output_file" "$link_defs" > final_output.md
+
+
+# sed -i 's/\r$//' filename
