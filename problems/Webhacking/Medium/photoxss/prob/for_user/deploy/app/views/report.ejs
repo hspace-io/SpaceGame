@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>report</title>
+</head>
+
+<body>
+  <h1>Report</h1>
+  URL : http://127.0.0.1:3000/<input id="reportURL" type="text"> <button id="submit-btn">제출</button>
+  <script>
+    const reportBox = document.querySelector('#reportURL');
+    const btn = document.querySelector('#submit-btn');
+
+    btn.addEventListener('click', async () => {
+      const result = await fetch('/report', {
+        method: 'POST',
+        body: JSON.stringify({
+          url: `http://127.0.0.1:3000/${reportBox.value}`,
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      let data = await result.text();
+      alert(data);
+    })
+  </script>
+</body>
+
+</html>

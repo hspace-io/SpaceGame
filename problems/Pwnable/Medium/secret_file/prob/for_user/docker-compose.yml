@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    secret_file:
+        container_name: secret_file
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "15252:22"
+        devices:
+            - "/dev/fuse:/dev/fuse"
+        volumes:
+            - "/dev/fuse:/dev/fuse"
+        cap_add:
+            - SYS_ADMIN
+        security_opt:
+            - apparmor:unconfined
+        restart: always

@@ -1,0 +1,11 @@
+name: Lottery
+category: pwn
+difficulty: hard
+cpu_spec: 1
+mem_spec: 512
+port: 15252
+15353
+description: Into the rand! 
+flag: hspace{W3Lcome_tO_R@nd0m!}
+chall_dir: lottery
+compose_file: lottery/prob/for_organizer/docker-compose.yml

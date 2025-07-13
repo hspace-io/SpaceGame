@@ -1,0 +1,17 @@
+name: flagreading #문제이름
+category: web #문제 분야 (pwn, web, rev, forensic, crypto, misc)
+# 여러 분야 일시 (pwn, web 등) - 배열로 작성:
+# pwn
+# web
+difficulty: easy # 난이도: beginner, easy, medium, hard
+cpu_spec: 1 # cpu spec - core
+mem_spec: 512 # memory spec - mb
+port: 5678
+# 포트가 여러개 일시 - 배열로 작성:
+# 2222
+# 4444
+description: |
+음 왜 안되지??
+flag: hspace{catflag!!} #플래그
+chall_dir: pwn-HSpaceSatellite #문제 폴더 (최상위 폴더 기준으로 작성)
+compose_file: prob\for_organizer\docker-compose.yml #문제 도커 컴포즈 파일 위치 (상대 경로로 작성)

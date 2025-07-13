@@ -1,0 +1,11 @@
+service challenge
+{
+    disable = no
+    socket_type = stream
+    protocol = tcp
+    wait = no 
+    user = pwn_user 
+    server = /pwn-wasd_space/wasd_space
+    type = UNLISTED
+    port = 9876
+}

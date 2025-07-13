@@ -1,0 +1,10 @@
+name: system_vuln
+category: pwn
+difficulty: hard
+cpu_spec: 1
+mem_spec: 512
+port: 15252
+description: Can't see the forest for the trees
+flag: hsapce{n0T_0Nly_Ch@1lENGe_BUT_WHo1E_SY$TEM}
+chall_dir: system_vuln
+compose_file: system_vuln/prob/for_organizer/docker-compose.yml

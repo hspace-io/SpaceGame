@@ -1,0 +1,13 @@
+name: bxorf
+category: pwn
+
+difficulty: beginner
+cpu_spec: 1
+mem_spec: 512
+port: 12345
+
+description: cat is greate
+
+flag: hspace{M30W_B0F_X0R_V3RY_34SY}
+chall_dir: bxorf
+compose_file: bxorf/prob/for_organizer/docker-compose.yml

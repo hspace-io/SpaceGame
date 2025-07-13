@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    perfect_machine:
+        container_name: perfect_machine
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "15252:15252"            

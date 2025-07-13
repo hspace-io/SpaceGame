@@ -1,0 +1,13 @@
+name: hspace_note
+category: pwn
+
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 11112
+
+description: Got plenty of memory, so we decided not to free. Can you still exploit it?
+
+flag: hspace{a63b2a1aa328fa9fca9ca8bd81cdfb36d9db07ab9d7cfa53f14424f5ae424b8b}
+chall_dir: pwn-hspace_note
+compose_file: pwn-hspace_note/prob/for_organizer/docker-compose.yml

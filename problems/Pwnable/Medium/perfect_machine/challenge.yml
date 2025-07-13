@@ -1,0 +1,10 @@
+name: perfect_machine
+category: misc
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 15252
+description: Can you beat my perfect machine?
+flag: hspace{tim3_g4P_1$_iMPOr74Nt}
+chall_dir: perfect_machine
+compose_file: perfect_machine/prob/for_organizer/docker-compose.yml

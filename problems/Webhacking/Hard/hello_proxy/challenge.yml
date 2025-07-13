@@ -1,0 +1,10 @@
+name: hello_proxy
+category: web
+difficulty: hard
+cpu_spec: 1
+mem_spec: 512
+port: 49621
+description: super secure proxy with cache
+flag: hspace{f8c7dd6f437f95725cd3dacb3403c9de}
+chall_dir: web-hello_proxy
+compose_file: web-hello_proxy/prob/for_organizer/docker-compose.yml

@@ -1,0 +1,13 @@
+name: chatgpt_evm
+category: pwn
+
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 19191
+
+description: chatGPT made this challenge for me
+
+flag: hspace{From:chatGPT4}
+chall_dir: pwn-chatgpt_evm
+compose_file: pwn-chatgpt_evm/prob/for_organizer/docker-compose.yml

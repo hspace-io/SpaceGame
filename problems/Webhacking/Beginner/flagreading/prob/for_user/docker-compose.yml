@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5678:5678"
+    volumes:
+      - ../for_organizer:/app
+    environment:
+      - FLASK_APP=app/app.py
+      - FLASK_ENV=development

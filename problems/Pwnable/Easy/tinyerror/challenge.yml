@@ -1,0 +1,12 @@
+name: tinyerror
+category: pwn
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 256
+port: 11115
+
+description: We have a tiny error, can you find and exploit it?
+flag: hspace{off-by-one-to-get-shell}
+chall_dir: pwn-tinyerror
+compose_file: pwn-tinyerror/prob/for_organizer/docker-compose.yml

@@ -1,0 +1,12 @@
+service benchmark
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = benchmark
+    wait = no
+    server = /home/benchmark/run.sh
+    type = UNLISTED
+    port = 1337
+}

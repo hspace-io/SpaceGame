@@ -1,0 +1,8 @@
+version: "3.3"
+
+services:
+  prob:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "31337:31337"

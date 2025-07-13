@@ -1,0 +1,16 @@
+name: Verwandeltes Labyrinth #문제이름
+category: rev #문제 분야 (pwn, web, rev, forensic, crypto, misc)
+
+difficulty: hard # 난이도: beginner, easy, medium, hard
+cpu_spec: 1
+mem_spec: 512
+port: null
+
+description: |
+  Won't you try to navigate this labyrinth?
+
+  ※해당 문제는 Ubuntu 22.04에서 컴파일 되었습니다.
+
+flag: hspace{F3238BA37FF304210D252BF23071006221E03CE8CAB4A345FDB66C185E2C964C}
+chall_dir: rev-VerwandeltesLabyrinth
+compose_file: null

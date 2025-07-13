@@ -1,0 +1,12 @@
+service pwn_bxorf
+{
+    disable     = no
+    type        = UNLISTED
+    wait        = no
+    server      = /home/bxorf/bxorf
+    socket_type = stream
+    protocol    = tcp
+    user        = yosi
+    port        = 12345
+    flags       = REUSE
+}

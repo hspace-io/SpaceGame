@@ -1,0 +1,13 @@
+name: NAEDILCUE 
+category: crypto
+
+difficulty: easy
+cpu_spec: null 
+mem_spec: null
+port: null
+
+description: Do you know the Euclidean algorithm well?
+
+flag: hspace{Let's_Stud9_h4rd_fr0m_tHe_bAsiCs_w0W_yoU_unDer5t0od_Euc1idEan_4lg0ritHm_pErfect1y} 
+chall_dir: crypto-NAEDILCUE 
+compose_file: null 

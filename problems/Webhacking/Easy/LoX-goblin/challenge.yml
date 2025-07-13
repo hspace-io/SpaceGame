@@ -1,0 +1,12 @@
+name: LoX-goblin
+category: web
+difficulty: easy
+cpu_spec: 1 
+mem_spec: 512 
+port: 22222
+
+description: Lord of XSleak - goblin  Monster for Beginners
+
+flag: hspace{tH3_BEg1nN1ng_of_7HE_DungeOn}
+chall_dir: web-LoX-goblin
+compose_file: web-LoX-goblin/prob/for_organizer/docker-compose.yml

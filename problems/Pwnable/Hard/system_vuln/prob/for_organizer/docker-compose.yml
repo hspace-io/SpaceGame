@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    system_vuln:
+        container_name: system_vuln
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "15252:15252"
+        security_opt:
+            - seccomp:blacklist.json
+        restart: always

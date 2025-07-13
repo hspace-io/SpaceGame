@@ -1,0 +1,12 @@
+service hspaceETH
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = hspaceETH
+    wait = no
+    server = /home/hspaceETH/run.sh
+    type = UNLISTED
+    port = 1337
+}

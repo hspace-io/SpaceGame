@@ -1,0 +1,13 @@
+name: antivirus_sandbox
+category: pwn
+
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 11111
+
+description: You should trick the sandbox to avoid detection... 
+
+flag: hspace{y0u_sucessfu11y_trick3d_th3_s4ndb0x}
+chall_dir: pwn-antivirus_sandbox
+compose_file: pwn-antivirus_sandbox/prob/for_organizer/docker-compose.yml

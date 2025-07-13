@@ -1,0 +1,10 @@
+name: svelte_api_v2
+category: web
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 49614
+description: super secure api
+flag: hspace{1367208a460b08c8b2906c91834b8c8b}
+chall_dir: web-svelte_api_v2
+compose_file: web-svelte_api_v2/prob/for_organizer/docker-compose.yml

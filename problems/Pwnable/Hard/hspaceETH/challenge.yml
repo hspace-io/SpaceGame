@@ -1,0 +1,10 @@
+name: hspaceETH
+category: pwn
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 30301
+description: Try to hack my ERC-20 based HSpace Token (HST), which worths about 1 wei per token.
+flag: hspace{this_bug_pattern_really_existed_in_several_ethereum_tokens}
+chall_dir: hspaceETH
+compose_file: prob/for_organizer/docker-compose.yml

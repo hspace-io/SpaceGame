@@ -1,0 +1,13 @@
+name: secret file
+category: pwn
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 15252
+description: |
+  I made super secret file system. Can you break it?
+  ssh user@ip -p 15252 (id/pw is user/user)
+  (Please do local exploit first.)
+flag: hspace{fUse_iS_$imp13_AnD_PoweRFul1!}
+chall_dir: secret_file
+compose_file: secret_file/prob/for_organizer/docker-compose.yml

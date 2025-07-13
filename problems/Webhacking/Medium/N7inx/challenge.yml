@@ -1,0 +1,11 @@
+name: N7inx 
+category: web 
+difficulty: medium
+cpu_spec: 1 
+mem_spec: 512 
+port: 80
+description: I don't like php7 and I don't know nginx very well...
+
+flag: hspace{yOu_HIT_7H3_pHp777_JAcKpO7}
+chall_dir: web-N7inx
+Dockerfile: web-N7inx/for_organizer/app/dockerfile

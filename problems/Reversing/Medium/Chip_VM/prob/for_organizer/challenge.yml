@@ -1,0 +1,16 @@
+name: Chip VM #문제이름
+category: rev #문제 분야 (pwn, web, rev, forensic, crypto, misc)
+
+difficulty: medium # 난이도: beginner, easy, medium, hard
+cpu_spec: 1
+mem_spec: 512
+port: null
+
+description: |
+  Insert Chip to play the game :)
+
+  ※해당 문제는 Ubuntu 22.04에서 컴파일되었습니다.
+
+flag: hspace{C_c0d3_c4nn07_3xpr3$S_4ll_op3r47i0ns_of_A_c0mput3r!_HaHa}
+chall_dir: rev-ChipVM
+compose_file: null
