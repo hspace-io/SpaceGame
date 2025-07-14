@@ -1,0 +1,4 @@
+selenium
+Flask
+Flask-Limiter
+webdriver-manager

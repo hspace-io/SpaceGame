@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuru Camp Collection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", Arial, sans-serif;
+            background-color: #f8ecdc;  
+            color: #594a41;  
+            background-image: linear-gradient(45deg, #f8ecdc 90%, #ffdfd0 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(255, 250, 245, 0.95);  
+            padding: 1.2rem;
+            box-shadow: 0 2px 12px rgba(210, 165, 130, 0.2);
+            margin-bottom: 2.5rem;
+            border-bottom: 3px solid #ffd4bc;  
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 2.5rem;
+        }
+
+        .logo {
+            height: 45px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .search-container {
+            flex: 1;
+            max-width: 480px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-form {
+            display: flex;
+        }
+
+        .search-input {
+            flex: 1;
+            height: 45px;
+            padding: 0 20px;
+            font-size: 16px;
+            border: 3px solid #ffd4bc;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #594a41;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .search-input::placeholder {
+            color: #b4a198;
+        }
+
+        .search-input:focus {
+            border-color: #ffb499;
+            background-color: #fff;
+        }
+
+        .search-button {
+            height: 45px;
+            width: 70px;
+            background-color: #ffd4bc;
+            border: 3px solid #ffd4bc;
+            border-left: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #594a41;
+        }
+
+        .search-button:hover {
+            background-color: #ffb499;
+            border-color: #ffb499;
+        }
+
+        .main-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 1rem 0;
+        }
+
+        .video-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(210, 165, 130, 0.15);
+            border: 2px solid transparent;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(210, 165, 130, 0.25);
+            border-color: #ffd4bc;
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 2px solid #ffeee5;
+        }
+
+        .thumbnail img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .thumbnail img {
+            transform: scale(1.07);
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(89, 74, 65, 0.9);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .video-info {
+            display: flex;
+            gap: 1rem;
+            padding: 0.5rem;
+        }
+
+        .channel-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ffd4bc;
+            transition: border-color 0.3s ease;
+        }
+
+        .video-card:hover .channel-avatar {
+            border-color: #ffb499;
+        }
+
+        .channel-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-details {
+            flex: 1;
+        }
+
+        .video-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.5;
+            color: #453832;
+        }
+
+        .channel-name, .video-stats {
+            font-size: 0.9rem;
+            color: #8c7b73;
+        }
+
+        .channel-name {
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+
+        /* 캠핑 아이콘 장식 */
+        .camping-decoration {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #ffb499;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 640px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Yuru Camp Collection">
+            </div>
+            <div class="search-container">
+                <form class="search-form" id="searchForm">
+                    <input 
+                        type="search" 
+                        class="search-input" 
+                        placeholder="Search for cozy moments..."
+                        name="query"
+                        id="searchInput"
+                    >
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='images/thumbnail1.png') }}" alt="Cozy camping moment">
+                    <span class="duration">15:42</span>
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="{{ url_for('static', filename='images/nadeshiko.png') }}" alt="Nadeshiko">
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-title">Winter Camping with Friends! Hot Chocolate & Snacks 🏕️</h3>
+                        <p class="channel-name">Nadeshiko's Adventures</p>
+                        <p class="video-stats">256K views • 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='images/thumbnail3.jpg') }}" alt="Mt. Fuji sunset">
+                    <span class="duration">12:28</span>
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="{{ url_for('static', filename='images/rin.jpg') }}" alt="Rin">
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-title">Perfect Sunset at Lake Motosu 🌅 Solo Camping Episode</h3>
+                        <p class="channel-name">Rin's Camping Guide</p>
+                        <p class="video-stats">182K views • 5 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='images/thumbnail2.png') }}" alt="Cooking in camp">
+                    <span class="duration">18:15</span>
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="{{ url_for('static', filename='images/nadeshiko.png') }}" alt="Nadeshiko">
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-title">Trying Camp Cooking for the First Time! 🍖</h3>
+                        <p class="channel-name">Nadeshiko's Adventures</p>
+                        <p class="video-stats">203K views • 1 week ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='images/0.jpg') }}" alt="Group camping">
+                    <span class="duration">21:33</span>
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="{{ url_for('static', filename='images/rin.jpg') }}" alt="Rin">
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-title">Group Camping Tips & Essential Items 📝</h3>
+                        <p class="channel-name">Rin's Camping Guide</p>
+                        <p class="video-stats">167K views • 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 5 - 세 번째 이미지 활용 -->
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='images/thumbnail4.jpg') }}" alt="Mt. Fuji view">
+                    <span class="duration">16:45</span>
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="{{ url_for('static', filename='images/nadeshiko.png') }}" alt="Nadeshiko">
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-title">Camping at Mt. Fuji - Amazing Winter View! ⛰️</h3>
+                        <p class="channel-name">Nadeshiko's Adventures</p>
+                        <p class="video-stats">145K views • 6 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='images/thumbnail5.png') }}" alt="Night cooking">
+                    <span class="duration">14:52</span>
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="{{ url_for('static', filename='images/rin.jpg') }}" alt="Rin">
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-title">Night Camping Recipes - Warm & Cozy Meals 🌙</h3>
+                        <p class="channel-name">Rin's Camping Guide</p>
+                        <p class="video-stats">198K views • 4 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 캠핑 아이콘 장식 -->
+    <div class="camping-decoration">
+        <i class="fas fa-campground"></i>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) {
+                window.location.href = `/search?query=${encodeURIComponent(query)}`;
+            }
+        });
+    </script>
+</body>
+</html>

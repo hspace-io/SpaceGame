@@ -1,0 +1,16 @@
+name: 8_chances
+category: web
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 10000
+
+description: |
+  Is it possible within 8 times?
+
+  http://{host}:10000/
+
+flag: hspace{cast_left_right__did_you_use_these_functions?}
+chall_dir: web-8_chances
+compose_file: web-8_chances/prob/for_organizer/docker-compose.yml

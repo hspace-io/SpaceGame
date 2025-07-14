@@ -1,0 +1,10 @@
+name: Space Casino
+category: web
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 5000
+description: 스ㅍㅔㅇl스ㅋrㅈ1노@@룰렛§§완비$$♜파트너스❀리그♜★토토♚♚ㄱr입✯ㅅ1 1000ㅋㅐ시☜☜100%증정※즉시이동 
+flag: hspace{185e8baadeab41ab52470e2b4a9a511a8a72b4601fd091a5}
+chall_dir: web-space_casino
+compose_file: web-space_casino/prob/for_organizer/docker-compose.yml

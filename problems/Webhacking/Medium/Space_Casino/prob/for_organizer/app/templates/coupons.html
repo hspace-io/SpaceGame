@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row m-4">
+            <div>
+                <img src="/static/img/coupon.png" height="70"/>
+            </div>
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Coupon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for coupon in coupons %}
+                        <tr>
+                            {% if coupon[4] %}
+                            <td><p>{{ coupon[2] }}</a></td>
+                            {% else %}
+                            <td><a href="/coupons/{{ coupon[1] }}">{{ coupon[2] }}</a></td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

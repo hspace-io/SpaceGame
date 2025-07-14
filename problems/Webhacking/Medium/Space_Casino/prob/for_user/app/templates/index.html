@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row m-4">
+            <div>
+                <img src="/static/img/welcome.png" height="70"/>
+            </div>
+            <div class="col-md-6">
+                {% if session['userid'] %}
+                <p class="my-1">Hello, {{ session['userid'] }}</p>
+                <p class="my-1">You have {{ cash }}points now!</p>
+                <p class="my-1">Play the games, Win the points, Get the flag!</p>
+                {% else %}
+                <p class="my-1">Login first</p>
+                {% endif %}
+                <img src="/static/img/jackpot-slot.gif" height="70"/>
+            </div>
+            <div class="col align-middle" style="background-image: url('/static/img/coins.gif'); width: 480px; height: 480px;"></div>
+        </div>
+    </div>
+</body>
+</html>

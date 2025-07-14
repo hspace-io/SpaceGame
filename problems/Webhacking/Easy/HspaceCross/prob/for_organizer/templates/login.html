@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">🔐 로그인</h3>
+          <form action="/login" method="POST">
+            <div class="mb-3">
+              <label for="username" class="form-label">사용자 이름</label>
+              <input type="text" class="form-control" id="username" name="username"
+                     placeholder="아이디 입력">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">비밀번호</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호 입력">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">로그인</button>
+          </form>
+        </div>
+        <div class="card-footer text-muted text-center">
+            HSPACE CTF
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

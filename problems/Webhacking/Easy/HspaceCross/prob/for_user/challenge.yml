@@ -1,0 +1,11 @@
+name: web-HSpaceCross
+category: web
+difficulty: low
+cpu_spec: 1
+mem_spec: 512
+port: 5000
+description: |
+  Cross --?
+flag: hspace{fG7dX3vZk9QmBnR2HtTyU6pLsW8cJjVxAaMzN1bY4rKq}
+chall_dir: web-HSpaceCross
+compose_file: web-HSpaceCross/docker-compose.yml

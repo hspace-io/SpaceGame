@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg border-bottom">
+    <div class="container">
+        <div class="navbar-header">
+        <a href="/" class="navbar-brand mb-0 h1 home">Space Casino</a>
+        </div>
+        <div class="navbar-nav">
+            {% if session['userid'] %}
+            <a href="/games" class="nav-link"><img src="/static/img/game_menu.png" height="50"/></a>
+            <a href="/coupons" class="nav-link"><img src="/static/img/coupon_menu.png" height="50"/></a>
+            <a href="/logout" class="nav-link"><img src="/static/img/logout_menu.png" height="50"/></a>
+            {% else %}
+            <a href="/login" class="nav-link"><img src="/static/img/login_menu.png" height="50"/></a>
+            <a href="/register" class="nav-link"><img src="/static/img/register_menu.png" height="50"/></a>
+            {% endif %}
+        </div>
+    </div>
+</nav>

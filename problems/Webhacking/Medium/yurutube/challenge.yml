@@ -1,0 +1,11 @@
+name: yurutube
+category: web
+difficulty: medium 
+cpu_spec: 1 
+mem_spec: 1024
+port: 44444
+
+description: I want to go camping in Japan too.
+flag: hspace{Cr0Ss_SiTe_LeaK_DurAtIOn_Of_4udio}
+chall_dir: web-yurutube 
+compose_file: web-yurutube/prob/for_organizer/docker-compose.yml 

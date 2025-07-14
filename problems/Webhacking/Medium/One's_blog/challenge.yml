@@ -1,0 +1,13 @@
+name: One's blog
+category: web
+
+difficulty: medium
+cpu_spec: 4
+mem_spec: 32768
+port: 3000
+
+description:
+
+flag: hspace{w0w_4aws0me_CSRF_aTTacK!!_W1tH_D0OOOM_Pur1fYyYy_s4n1t1ze_ByPaSsSs1ng!}
+chall_dir: web-One's-blog
+compose_file: web-One's blog/prob/for_organizer/Dockerfile

@@ -1,0 +1,3 @@
+selenium
+Flask
+webdriver-manager

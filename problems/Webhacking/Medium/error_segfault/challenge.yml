@@ -1,0 +1,12 @@
+name: error segfault #문제이름
+category: web
+difficulty: medium # 난이도: beginner, easy, medium, hard
+cpu_spec: 1 # cpu spec - core
+mem_spec: 512 # memory spec - mb
+port: 2222
+description: |
+요즘 이상하게, 에러 로그가 찍히는게 많아요... 아니 뭐 때문에 그런지 모르겠습니다....
+알려주세요!!!
+flag: hspace{8091efe97affa5ba5d7d8ea1aa14b037461433c4e890d45b188648d996790ed6}
+chall_dir: web-error_segfault #문제 폴더 (최상위 폴더 기준으로 작성)
+compose_file: web-error_segfault/for_organizer/docker-compose.yml #문제 도커 컴포즈 파일 위치 (상대 경로로 작성)
