@@ -1,0 +1,10 @@
+name: uaf_basic
+category: pwn
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 4021
+description: easy UAF!
+flag: huntingmaster{w3lc0me_2_th3_w0rld_0f_pwn4BL3}
+chall_dir: uaf_basic
+compose_file: uaf_basic/prob/for_organizer/docker-compose.yml

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    babyhash:
+        container_name: babyhash
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "1971:1971"

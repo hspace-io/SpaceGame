@@ -1,0 +1,1 @@
+huntingmaster{this_is_sample_flag}

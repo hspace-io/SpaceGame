@@ -1,0 +1,17 @@
+
+version: '3.8'
+
+services:
+  ipcam:
+    build:
+      context: ./firmware-server
+      dockerfile: Dockerfile
+    ports:
+      - "21345:21345"
+
+  spi:
+    build:
+      context: ./spi-server
+      dockerfile: Dockerfile
+    ports:
+      - "21346:21346"

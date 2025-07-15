@@ -1,0 +1,10 @@
+services:
+  pwn101:
+    container_name: pwn101
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    devices: 
+      - "/dev/kvm:/dev/kvm" 

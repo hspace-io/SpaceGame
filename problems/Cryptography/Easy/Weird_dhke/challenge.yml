@@ -1,0 +1,13 @@
+name: Wired dhke
+category: crypto 
+
+difficulty: easy 
+cpu_spec: 1 
+mem_spec: 512 
+port: 54321
+description: |
+Let's factor the shared secret
+test discription 
+flag: HSPACE{d10ph4n71n3_3qu4710n_F7W} 
+chall_dir: crypto-Weird_dhke
+compose_file: crypto-Weird_dhke/for_organizer/docker-compose.yml

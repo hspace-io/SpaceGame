@@ -1,0 +1,12 @@
+name: catnip
+category: rev
+difficulty: medium
+cpu_spec: -
+mem_spec: -
+port: -
+description: |
+I don't understand why Chisam likes catnip so much, so I decided to become a cat.
+How do I eat catnip?
+flag: hspace{Chisam_Is_Famous_CukUniv_Cat}
+chall_dir: /prob/for_user
+compose_file: -

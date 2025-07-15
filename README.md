@@ -1,59 +1,81 @@
 # SpaceGame
 
-|   Category   |  difficulty  |        problem         |                                      Link                                     |     port     |  server |    출제일시   |
-|--------------|--------------|------------------------|-------------------------------------------------------------------------------|--------------|---------|---------------|
-| Webhacking   | Beginner     | flagreading            | [problem][flagreading prob], [solution][flagreading sol]                      | 5678         | o       | 2024년 4월 #1 |
-| Webhacking   | Beginner     | jsgood                 | [problem][jsgood prob] [solution][jsgood sol]                                 | x            | X       |               |
-| Webhacking   | Beginner     | Scroll_Master          | [problem][Scroll_Master prob], [solution][Scroll_Master sol]                  | 12312        | o       | 2024년 5월 #1 |
-| Webhacking   | Beginner     | soeasy                 | [problem][soeasy prob] [solution][soeasy sol]                                 | o            | 8000    |               |
-| Webhacking   | Easy         | 8_chances              | [problem][8_chances prob] [solution][8_chances sol]                           | o            | 10000   |               |
-| Webhacking   | Easy         | Exec Anything          | [problem][Exec Anything prob], [solution][Exec Anything sol]                  | 8000         | o       | 2024년 5월 #1 |
-| Webhacking   | Easy         | HspaceCross            | [problem][HspaceCross prob] [solution][HspaceCross sol]                       | o            | 5000    |               |
-| Webhacking   | Easy         | jelly shop             | [problem][jelly shop prob], [solution][jelly shop sol]                        | 2007         | o       | 2024년 5월 #1 |
-| Webhacking   | Easy         | LoX-goblin             | [problem][LoX-goblin prob], [solution][LoX-goblin sol]                        | 22222        | o       | 2024년 5월 #1 |
-| Webhacking   | Easy         | RandomSecret           | [problem][RandomSecret prob], [solution][RandomSecret sol]                    | 4000         | o       | 2024년 4월 #1 |
-| Webhacking   | Easy         | WhiteSpade             | [problem][WhiteSpade prob], [solution][WhiteSpade sol]                        | 28000        | o       | 2024년 6월 #1 |
-| Webhacking   | Medium       | Animal                 | [problem][Animal prob], [solution][Animal sol]                                | 35135        | o       | 2024년 6월 #1 |
-| Webhacking   | Medium       | error segfault         | [problem][error segfault prob] [solution][error segfault sol]                 | o            | 2222:80 |               |
-| Webhacking   | Medium       | N7inx                  | [problem][N7inx prob], [solution][N7inx sol]                                  | 80           | o       | 2024년 5월 #1 |
-| Webhacking   | Medium       | One\'s blog            | [problem][One's blog prob] [solution][One's blog sol]                         | o            | 3000    |               |
-| Webhacking   | Medium       | photoxss               | [problem][photoxss prob], [solution][photoxss sol]                            | 3000         | o       | 2024년 4월 #1 |
-| Webhacking   | Medium       | Space Casino           | [problem][Space Casino prob] [solution][Space Casino sol]                     | o            | 5000    |               |
-| Webhacking   | Medium       | svelte_api_v2          | [problem][svelte_api_v2 prob], [solution][svelte_api_v2 sol]                  | 49614        | o       | 2024년 5월 #1 |
-| Webhacking   | Medium       | yurutube               | [problem][yurutube prob] [solution][yurutube sol]                             | o            | 44444   |               |
-| Webhacking   | Hard         | hello_proxy            | [problem][hello_proxy prob], [solution][hello_proxy sol]                      | 49621        | o       | 2024년 5월 #1 |
-| Webhacking   | Hard         | LoX-Zombie             | [problem][LoX-Zombie prob], [solution][LoX-Zombie sol]                        | 44444        | o       | 2024년 5월 #1 |
-| Webhacking   | Hard         | Spiderman              | [problem][Spiderman prob] [solution][Spiderman sol]                           | o            | 44444   |               |
-| Pwnable      | Beginner     | bxorf                  | [problem][bxorf prob], [solution][bxorf sol]                                  | 12345        | o       | 2025년 1월    |
-| Pwnable      | Beginner     | cli-painter            | [problem][cli-painter prob], [solution][cli-painter sol]                      | 39393        | o       | 2024년 4월 #1 |
-| Pwnable      | Beginner     | only_takes_one_bullet  | [problem][only_takes_one_bullet prob], [solution][only_takes_one_bullet sol]  | 8888         | o       | 2024년 5월 #2 |
-| Pwnable      | Beginner     | wasd_space             | [problem][wasd_space prob], [solution][wasd_space sol]                        | 6789         | o       | 2024년 5월 #2 |
-| Pwnable      | Easy         | benchmark              | [problem][benchmark prob], [solution][benchmark sol]                          | 30030        | o       | 2024년 5월 #2 |
-| Pwnable      | Easy         | cRPC v1                | [problem][cRPC v1 prob], [solution][cRPC v1 sol]                              | 18181        | o       | 2024년 5월 #2 |
-| Pwnable      | Easy         | Hspace Babynote        | [problem][Hspace Babynote prob], [solution][Hspace Babynote sol]              | 11111        | o       | 2024 HCTF     |
-| Pwnable      | Easy         | tinyerror              | [problem][tinyerror prob], [solution][tinyerror sol]                          | 11115        | o       | 2025년 1월    |
-| Pwnable      | Easy         | simple_note            | [problem][simple_note prob] [solution][simple_note sol]                       | o            | 15252   |               |
-| Pwnable      | Medium       | Antivirus Sandbox      | [problem][Antivirus Sandbox prob], [solution][Antivirus Sandbox sol]          | 11111        | o       | 2024년 6월 #1 |
-| Pwnable      | Medium       | ez_vm                  | [problem][ez_vm prob], [solution][ez_vm sol]                                  | 31337        | o       | 2025년 1월    |
-| Pwnable      | Medium       | Hspace Note            | [problem][Hspace Note prob], [solution][Hspace Note sol]                      | 11112        | o       | 2024 HCTF     |
-| Pwnable      | Medium       | only one               | [problem][only one prob], [solution][only one sol]                            | 31337        | o       | 2024년 4월 #1 |
-| Pwnable      | Medium       | open_read_write        | [problem][open_read_write prob], [solution][open_read_write sol]              | 10101        | o       | 2024년 5월 #2 |
-| Pwnable      | Medium       | perfect machine        | [problem][perfect machine prob], [solution][perfect machine sol]              | 15252        | o       | 2025년 1월    |
-| Pwnable      | Medium       | secret file            | [problem][secret file prob], [solution][secret file sol]                      | 15252        | o       | 2024년 5월 #2 |
-| Pwnable      | Hard         | chatgpt_evm            | [problem][chatgpt_evm prob], [solution][chatgpt_evm sol]                      | 19191        | o       | 2024년 5월 #2 |
-| Pwnable      | Hard         | hspaceETH              | [problem][hspaceETH prob], [solution][hspaceETH sol]                          | 30031        | o       | 2024년 5월 #2 |
-| Pwnable      | Hard         | lottery                | [problem][lottery prob], [solution][lottery sol]                              | 15252, 15353 | o       | 2024년 4월 #1 |
-| Pwnable      | Hard         | system_vuln            | [problem][system_vuln prob], [solution][system_vuln sol]                      | 15252        | o       | 2024년 6월 #1 |
-| Reversing    | Beginner     | Ah...?                 | [problem][Ah...? prob] [solution][Ah...? sol]                                 | 2346         | x       | 2024년 6월 #1 |
-| Reversing    | Medium       | sigvm                  | [problem][sigvm prob] [solution][sigvm sol]                                   |              | X       | 2024년 4월 #1 |
-| Reversing    | Medium       | Chip VM                | [problem][Chip VM prob] [solution][Chip VM sol]                               |              | X       | 2024년 4월 #1 |
-| Reversing    | Hard         | Verwandeltes Labyrinth | [problem][Verwandeltes Labyrinth prob] [solution][Verwandeltes Labyrinth sol] | x            | X       | 2024년 4월 #1 |
-| Cryptography | Beginner     | quadratic function     | [problem][quadratic function prob] [solution][quadratic function sol]         | x            | X       | 2024년 4월 #1 |
-| Cryptography | Easy         | NAEDILCUE              | [problem][NAEDILCUE prob] [solution][NAEDILCUE sol]                           | x            | null    | 2024년 4월 #1 |
-| Cryptography | Easy         | GP                     | [problem][GP prob] [solution][GP sol]                                         | x            | X       | 2024년 6월 #1 |
-| Cryptography | Medium       | SquRSA_xx              | [problem][SquRSA_xx prob] [solution][SquRSA_xx sol]                           | x            | null    | 2024년 6월 #1 |
-| Cryptography | Medium, Hard | SquRSA_xx              | [problem][SquRSA_xx_H prob] [solution][SquRSA_xx_H sol]                       | x            | null    | 2024년 4월 #1 |
-
+|   Category   |  difficulty  |                 problem                  |                                                      Link                                                     |     port     |    server    |     출제일시     |
+|--------------|--------------|------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------|--------------|------------------|
+| Webhacking   | Beginner     | flagreading                              | [problem][flagreading prob], [solution][flagreading sol]                                                      | 5678         | o            | 2024년 4월 #1    |
+| Webhacking   | Beginner     | jsgood                                   | [problem][jsgood prob] [solution][jsgood sol]                                                                 | x            | X            |                  |
+| Webhacking   | Beginner     | Scroll_Master                            | [problem][Scroll_Master prob], [solution][Scroll_Master sol]                                                  | 12312        | o            | 2024년 5월 #1    |
+| Webhacking   | Beginner     | soeasy                                   | [problem][soeasy prob] [solution][soeasy sol]                                                                 | o            | 8000         |                  |
+| Webhacking   | Easy         | 8_chances                                | [problem][8_chances prob] [solution][8_chances sol]                                                           | o            | 10000        |                  |
+| Webhacking   | Easy         | Exec Anything                            | [problem][Exec Anything prob], [solution][Exec Anything sol]                                                  | 8000         | o            | 2024년 5월 #1    |
+| Webhacking   | Easy         | HspaceCross                              | [problem][HspaceCross prob] [solution][HspaceCross sol]                                                       | o            | 5000         |                  |
+| Webhacking   | Easy         | jelly shop                               | [problem][jelly shop prob], [solution][jelly shop sol]                                                        | 2007         | o            | 2024년 5월 #1    |
+| Webhacking   | Easy         | LoX-goblin                               | [problem][LoX-goblin prob], [solution][LoX-goblin sol]                                                        | 22222        | o            | 2024년 5월 #1    |
+| Webhacking   | Easy         | RandomSecret                             | [problem][RandomSecret prob], [solution][RandomSecret sol]                                                    | 4000         | o            | 2024년 4월 #1    |
+| Webhacking   | Easy         | WhiteSpade                               | [problem][WhiteSpade prob], [solution][WhiteSpade sol]                                                        | 28000        | o            | 2024년 6월 #1    |
+| Webhacking   | Medium       | Animal                                   | [problem][Animal prob], [solution][Animal sol]                                                                | 35135        | o            | 2024년 6월 #1    |
+| Webhacking   | Medium       | error segfault                           | [problem][error segfault prob] [solution][error segfault sol]                                                 | o            | 2222:80      |                  |
+| Webhacking   | Medium       | N7inx                                    | [problem][N7inx prob], [solution][N7inx sol]                                                                  | 80           | o            | 2024년 5월 #1    |
+| Webhacking   | Medium       | One\'s blog                              | [problem][One's blog prob] [solution][One's blog sol]                                                         | o            | 3000         |                  |
+| Webhacking   | Medium       | photoxss                                 | [problem][photoxss prob], [solution][photoxss sol]                                                            | 3000         | o            | 2024년 4월 #1    |
+| Webhacking   | Medium       | Space Casino                             | [problem][Space Casino prob] [solution][Space Casino sol]                                                     | o            | 5000         |                  |
+| Webhacking   | Medium       | svelte_api_v2                            | [problem][svelte_api_v2 prob], [solution][svelte_api_v2 sol]                                                  | 49614        | o            | 2024년 5월 #1    |
+| Webhacking   | Medium       | yurutube                                 | [problem][yurutube prob] [solution][yurutube sol]                                                             | o            | 44444        |                  |
+| Webhacking   | Hard         | hello_proxy                              | [problem][hello_proxy prob], [solution][hello_proxy sol]                                                      | 49621        | o            | 2024년 5월 #1    |
+| Webhacking   | Hard         | LoX-Zombie                               | [problem][LoX-Zombie prob], [solution][LoX-Zombie sol]                                                        | 44444        | o            | 2024년 5월 #1    |
+| Webhacking   | Hard         | Spiderman                                | [problem][Spiderman prob] [solution][Spiderman sol]                                                           | o            | 44444        |                  |
+| Pwnable      | Beginner     | bxorf                                    | [problem][bxorf prob], [solution][bxorf sol]                                                                  | 12345        | o            | 2025년 1월       |
+| Pwnable      | Beginner     | cli-painter                              | [problem][cli-painter prob], [solution][cli-painter sol]                                                      | 39393        | o            | 2024년 4월 #1    |
+| Pwnable      | Beginner     | only_takes_one_bullet                    | [problem][only_takes_one_bullet prob], [solution][only_takes_one_bullet sol]                                  | 8888         | o            | 2024년 5월 #2    |
+| Pwnable      | Beginner     | wasd_space                               | [problem][wasd_space prob], [solution][wasd_space sol]                                                        | 6789         | o            | 2024년 5월 #2    |
+| Pwnable      | Easy         | babykernel                               | [problem][babykernel prob] [solution][babykernel sol]                                                         | o            | 55555        |                  |
+| Pwnable      | Easy         | benchmark                                | [problem][benchmark prob], [solution][benchmark sol]                                                          | 30030        | o            | 2024년 5월 #2    |
+| Pwnable      | Easy         | cRPC v1                                  | [problem][cRPC v1 prob], [solution][cRPC v1 sol]                                                              | 18181        | o            | 2024년 5월 #2    |
+| Pwnable      | Easy         | Hspace Babynote                          | [problem][Hspace Babynote prob], [solution][Hspace Babynote sol]                                              | 11111        | o            | 2024 HCTF        |
+| Pwnable      | Easy         | simple_note                              | [problem][simple_note prob] [solution][simple_note sol]                                                       | o            | 15252        |                  |
+| Pwnable      | Easy         | simple_note_hm                           | [problem][simple_note_hm prob] [solution][simple_note_hm sol]                                                 | o            | 15252        | HM               |
+| Pwnable      | Easy         | tinyerror                                | [problem][tinyerror prob], [solution][tinyerror sol]                                                          | 11115        | o            | 2025년 1월       |
+| Pwnable      | Easy         | uaf_basic                                | [problem][uaf_basic prob] [solution][uaf_basic sol]                                                           | o            | 4021         |                  |
+| Pwnable      | Easy         | ZeroSuperTigerDomain                     | [problem][ZeroSuperTigerDomain prob] [solution][ZeroSuperTigerDomain sol]                                     | o            | 15252        | (working title)  |
+| Pwnable      | Hard         | chatgpt_evm                              | [problem][chatgpt_evm prob], [solution][chatgpt_evm sol]                                                      | 19191        | o            | 2024년 5월 #2    |
+| Pwnable      | Hard         | hspaceETH                                | [problem][hspaceETH prob], [solution][hspaceETH sol]                                                          | 30031        | o            | 2024년 5월 #2    |
+| Pwnable      | Hard         | lottery                                  | [problem][lottery prob], [solution][lottery sol]                                                              | 15252, 15353 | o            | 2024년 4월 #1    |
+| Pwnable      | Hard         | system_vuln                              | [problem][system_vuln prob], [solution][system_vuln sol]                                                      | 15252        | o            | 2024년 6월 #1    |
+| Pwnable      | Medium       | Antivirus Sandbox                        | [problem][Antivirus Sandbox prob], [solution][Antivirus Sandbox sol]                                          | 11111        | o            | 2024년 6월 #1    |
+| Pwnable      | Medium       | ez_vm                                    | [problem][ez_vm prob], [solution][ez_vm sol]                                                                  | 31337        | o            | 2025년 1월       |
+| Pwnable      | Medium       | Hspace Note                              | [problem][Hspace Note prob], [solution][Hspace Note sol]                                                      | 11112        | o            | 2024 HCTF        |
+| Pwnable      | Medium       | only one                                 | [problem][only one prob], [solution][only one sol]                                                            | 31337        | o            | 2024년 4월 #1    |
+| Pwnable      | Medium       | open_read_write                          | [problem][open_read_write prob], [solution][open_read_write sol]                                              | 10101        | o            | 2024년 5월 #2    |
+| Pwnable      | Medium       | p-shell                                  | [problem][p-shell prob] [solution][p-shell sol]                                                               | o            | 18775        |                  |
+| Pwnable      | Medium       | perfect machine                          | [problem][perfect machine prob], [solution][perfect machine sol]                                              | 15252        | o            | 2025년 1월       |
+| Pwnable      | Medium       | pwn101                                   | [problem][pwn101 prob] [solution][pwn101 sol]                                                                 | o            | 8080         |                  |
+| Pwnable      | Medium       | secret file                              | [problem][secret file prob], [solution][secret file sol]                                                      | 15252        | o            | 2024년 5월 #2    |
+| Reversing    | Beginner     | Ah...?                                   | [problem][Ah...? prob] [solution][Ah...? sol]                                                                 | 2346         | x            | 2024년 6월 #1    |
+| Reversing    | Beginner     | serial                                   | [problem][serial prob] [solution][serial sol]                                                                 | x            | .            |                  |
+| Reversing    | Beginner     | vuln_func                                | [problem][vuln_func prob] [solution][vuln_func sol]                                                           | x            | 12345        |                  |
+| Reversing    | Easy         | find_answer                              | [problem][find_answer prob] [solution][find_answer sol]                                                       | x            | 23456        |                  |
+| Reversing    | Easy         | My VM                                    | [problem][My VM prob] [solution][My VM sol]                                                                   | x            | 서버 X       |                  |
+| Reversing    | Easy         | permutation                              | [problem][permutation prob] [solution][permutation sol]                                                       | x            |              |                  |
+| Reversing    | Easy         | 아크                                     | [problem][아크 prob] [solution][아크 sol]                                                                     | x            | x            |                  |
+| Reversing    | Hard         | Surprising Painful Infrastructure        | [problem][Surprising Painful Infrastructure prob] [solution][Surprising Painful Infrastructure sol]           | o            | 5678         |                  |
+| Reversing    | Hard         | Verwandeltes Labyrinth                   | [problem][Verwandeltes Labyrinth prob] [solution][Verwandeltes Labyrinth sol]                                 | x            | X            | 2024년 4월 #1    |
+| Reversing    | Medium       | Catnip                                   | [problem][Catnip prob] [solution][Catnip sol]                                                                 | x            | -            |                  |
+| Reversing    | Medium       | Chip VM                                  | [problem][Chip VM prob] [solution][Chip VM sol]                                                               |              | X            | 2024년 4월 #1    |
+| Reversing    | Medium       | ObfuSWF                                  | [problem][ObfuSWF prob] [solution][ObfuSWF sol]                                                               | x            | -            |                  |
+| Reversing    | Medium       | sigvm                                    | [problem][sigvm prob] [solution][sigvm sol]                                                                   |              | X            | 2024년 4월 #1    |
+| Reversing    | Medium       | 내일 할 일                               | [problem][내일 할 일 prob] [solution][내일 할 일 sol]                                                         | x            | x            |                  |
+| Cryptography | Beginner     | quadratic function                       | [problem][quadratic function prob] [solution][quadratic function sol]                                         | x            | X            | 2024년 4월 #1    |
+| Cryptography | Easy         | NAEDILCUE                                | [problem][NAEDILCUE prob] [solution][NAEDILCUE sol]                                                           | x            | null         | 2024년 4월 #1    |
+| Cryptography | Easy         | GP                                       | [problem][GP prob] [solution][GP sol]                                                                         | x            | X            | 2024년 6월 #1    |
+| Cryptography | Easy         | Weird dhke                               | [problem][Weird dhke prob] [solution][Weird dhke sol]                                                         | o            | 54321        |                  |
+| Cryptography | Medium       | SquRSA_xx                                | [problem][SquRSA_xx prob] [solution][SquRSA_xx sol]                                                           | x            | null         | 2024년 6월 #1    |
+| Cryptography | Medium       | BabyHash                                 | [problem][BabyHash prob] [solution][BabyHash sol]                                                             | o            | 1971         |                  |
+| Cryptography | Medium, Hard | SquRSA_xx                                | [problem][SquRSA_xx_H prob] [solution][SquRSA_xx_H sol]                                                       | x            | null         | 2024년 4월 #1    |
+| Misc         | Easy         | READ (Read, Extract, Analyze, Datasheet) | [problem][READ prob] [solution][READ sol]                                                                     | o            | 21345, 21346 | 2024 PhyiscalLAB |
+| Misc         | Medium       | Mine Circuit                             | [problem][Mine Circuit prob] [solution][Mine Circuit sol]                                                     | x            | x            |                  |
+| Misc         | Medium       | Mr.11100101101111110001011011111110100   | [problem][Mr.11100101101111110001011011111110100 prob] [solution][Mr.11100101101111110001011011111110100 sol] | o            | 4997         |                  |
+| Misc         | Easy         | Steins;Password                          | [problem][Steins;Password prob] [solution][Steins;Password sol]                                               | x            | 0            |                  |
+| Misc         | Hard         | Double_Cast                              | [problem][Double_Cast prob] [solution][Double_Cast sol]                                                       | o            | 44444:1337   |                  |
 
 
 <!-- Webhacking -->
@@ -179,6 +201,27 @@
 [system_vuln prob]: ./problems/Pwnable/Hard/system_vuln
 [system_vuln sol]: ./solutions/Pwnable/Hard/system_vuln
 
+
+[uaf_basic prob]: ./problems/Pwnable/Easy/uaf_basic
+[uaf_basic sol]: ./solutions/Pwnable/Easy/uaf_basic
+
+[simple_note_hm prob]: ./problems/Pwnable/Easy/simple_note_hm
+[simple_note_hm sol]: ./solutions/Pwnable/Easy/simple_note_hm
+
+[babykernel prob]: ./problems/Pwnable/Easy/babykernel
+[babykernel sol]: ./solutions/Pwnable/Easy/babykernel
+
+[ZeroSuperTigerDomain prob]: ./problems/Pwnable/Easy/ZeroSuperTigerDomain
+[ZeroSuperTigerDomain sol]: ./solutions/Pwnable/Easy/ZeroSuperTigerDomain
+
+[pwn101 prob]: ./problems/Pwnable/Medium/pwn101
+[pwn101 sol]: ./solutions/Pwnable/Medium/pwn101
+
+[p-shell prob]: ./problems/Pwnable/Medium/p-shell
+[p-shell sol]: ./solutions/Pwnable/Medium/p-shell
+
+
+
 <!-- Reversing -->
 
 [Ah...? prob]: ./problems/Reversing/Beginner/ah,,,?
@@ -193,6 +236,36 @@
 
 [Verwandeltes Labyrinth prob]: ./problems/Reversing/Hard/Verwandeltes_Labyrinth
 [Verwandeltes Labyrinth sol]: ./solutions/Reversing/Hard/Verwandeltes_Labyrinth
+
+[find_answer prob]: ./problems/Reversing/Easy/find_answer
+[find_answer sol]: ./solutions/Reversing/Easy/find_answer
+
+[vuln_func prob]: ./problems/Reversing/Beginner/vuln_func
+[vuln_func sol]: ./solutions/Reversing/Beginner/vuln_func
+
+[Surprising Painful Infrastructure prob]: ./problems/Reversing/Hard/Surprising_Painful_Infrastructure
+[Surprising Painful Infrastructure sol]: ./solutions/Reversing/Hard/Surprising_Painful_Infrastructure
+
+[Catnip prob]: ./problems/Reversing/Medium/Catnip
+[Catnip sol]: ./solutions/Reversing/Medium/Catnip
+
+[My VM prob]: ./problems/Reversing/Easy/My_VM
+[My VM sol]: ./solutions/Reversing/Easy/My_VM
+
+[내일 할 일 prob]: ./problems/Reversing/Medium/내일_할_일
+[내일 할 일 sol]: ./solutions/Reversing/Medium/내일_할_일
+
+[ObfuSWF prob]: ./problems/Reversing/Medium/ObfuSWF
+[ObfuSWF sol]: ./solutions/Reversing/Medium/ObfuSWF
+
+[serial prob]: ./problems/Reversing/Beginner/serial
+[serial sol]: ./solutions/Reversing/Beginner/serial
+
+[permutation prob]: ./problems/Reversing/Easy/permutation
+[permutation sol]: ./solutions/Reversing/Easy/permutation
+
+[아크 prob]: ./problems/Reversing/Easy/아크
+[아크 sol]: ./solutions/Reversing/Easy/아크
 
 
 <!-- Cryptography -->
@@ -210,6 +283,29 @@
 
 [SquRSA_xx_H prob]: ./problems/Cryptography/Hard/SquRSA_xx
 [SquRSA_xx_H sol]: ./solutions/Cryptography/Hard/SquRSA_xx
+
+[BabyHash prob]: ./problems/Cryptography/Medium/BabyHash
+[BabyHash sol]: ./solutions/Cryptography/Medium/BabyHash
+
+[Weird dhke prob]: ./problems/Cryptography/Easy/Weird_dhke
+[Weird dhke sol]: ./solutions/Cryptography/Easy/Weird_dhke
+
+<!-- Misc -->
+[READ prob]: ./problems/Misc/Easy/READ
+[READ sol]: ./solutions/Misc/Easy/READ
+
+[Mine Circuit prob]: ./problems/Misc/Medium/Mine_Circuit
+[Mine Circuit sol]: ./solutions/Misc/Medium/Mine_Circuit
+
+[Mr.11100101101111110001011011111110100 prob]: ./problems/Misc/Medium/Mr.11100101101111110001011011111110100
+[Mr.11100101101111110001011011111110100 sol]: ./solutions/Misc/Medium/Mr.11100101101111110001011011111110100
+
+[Steins;Password prob]: ./problems/Misc/Easy/Steins;Password
+[Steins;Password sol]: ./solutions/Misc/Easy/Steins;Password
+
+[Double_Cast prob]: ./problems/Misc/Hard/Double_Cast
+[Double_Cast sol]: ./solutions/Misc/Hard/Double_Cast
+
 
 <!-- google -->
 [soeasy prob]: ./problems/Webhacking/Beginner/soeasy

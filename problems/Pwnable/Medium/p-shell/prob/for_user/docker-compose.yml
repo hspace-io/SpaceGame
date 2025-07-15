@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    pshell:
+        container_name: pshell
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "18775:18775"

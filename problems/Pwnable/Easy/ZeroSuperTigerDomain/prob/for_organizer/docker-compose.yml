@@ -1,0 +1,6 @@
+services:
+  easy_pwn:
+    build: .
+    ports:
+      - "15252:15252"
+    restart: always

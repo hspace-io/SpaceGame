@@ -1,0 +1,11 @@
+name: Mr_11100101101111110001011011111110100
+category: misc
+difficulty: mideum
+cpu_spec: 1
+mem_spec: 512
+port: 8888
+description: 올드트래포드 직관을 갔다가 로봇을 발견했어요! 이동하는 로봇의 무선 신호를 캡쳐해봤는데 분석을 못하겠어요.. 제발 나 좀 도와줘!!
+
+flag: HSPACE{n0w_y0u_c4n_4n41yz3_th3_wir313ss_sign41!}
+chall_dir: Mr_11100101101111110001011011111110100
+compose_file: Mr_11100101101111110001011011111110100/prob/for_organizer/docker-compose.yml

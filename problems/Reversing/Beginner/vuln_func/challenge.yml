@@ -1,0 +1,16 @@
+name: vuln_func
+category: rev
+
+difficulty: beginner
+cpu_spec: 1
+mem_spec: 256
+port: 12345
+
+description:
+이 문제는 주어진 이미지를 분석하는 것입니다.
+문제의 플래그는 취약점을 이용할 수 있는 첫 번째 함수의 메모리 주소를 적어주시면 됩니다
+ex) 만약 0x08049358 <+418>   call   0x8049060 <free@plt>이 정답 부분이라면 huntingmaster{0x08049358} 이라고 적으시면 됩니다.
+그리고 Writeup을 작성 하실 때에는 주어진 이미지 내에서 분석 할 수 있는 모든 취약점에 대한 내용을 작성해 주시면 됩니다.
+
+flag: huntingmaster{0x08049268}
+chall_dir: vuln_func

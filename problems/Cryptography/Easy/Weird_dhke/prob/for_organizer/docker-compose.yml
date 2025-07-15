@@ -1,0 +1,7 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "54321:54321"
+    command:  ["socat", "TCP-LISTEN:54321,fork", "EXEC:python prob.py"]

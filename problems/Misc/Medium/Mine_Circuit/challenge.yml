@@ -1,0 +1,11 @@
+name: Mine Circuit
+category: misc
+difficulty: medium
+cpu_spec: x
+mem_spec: x
+port: x
+description: 마인크래프트에는 레드스톤을 이용해서 논리 게이트를 구현할 수 있어요. 주어진 레드스톤 회로를 분석하고 알맞은 플래그를 획득해주세요! ※ 마인크래프트 v1.21.1에서 제작되었습니다.
+
+flag: hspace{C4n_U_5imp1ify_Cir<ui7s?}
+chall_dir: x
+compose_file: x

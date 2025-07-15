@@ -1,0 +1,150 @@
+.data
+array1: .byte 0x8d, 0x6e, 0x8e, 0xac, 0x6c, 0x2c, 0x6f, 0xb6, 0xeb, 0x16, 0x0c, 0x2d, 0xb6, 0x0e, 0xeb, 0x16
+array2: .byte 0xac, 0x16, 0xac, 0x16, 0xac, 0x4e, 0x6c, 0x8d, 0xd6, 0x16, 0xeb, 0x16, 0x6e, 0x6e, 0x76, 0x2d
+array3: .byte 0x4c, 0x0d, 0xaf, 0xeb, 0xb6, 0x6e, 0xeb, 0xce, 0x76, 0x4e, 0xaf, 0xeb, 0x2c, 0x16, 0x6e, 0xaf
+array4: .byte 0xeb, 0x16, 0xcc, 0x0e, 0x76, 0x4e, 0xeb, 0x16, 0x0d, 0x0d, 0xeb, 0x96, 0xcc, 0xeb, 0xec, 0x2e
+array5: .byte 0xaf, 0x6e, 0xeb, 0x8d, 0x2c, 0x8d, 0x2c, 0x2f
+
+fake_array1: .byte 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0x00
+fake_array2: .byte 0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef, 0xfe, 0xdc, 0xba, 0x98, 0x76, 0x54, 0x32, 0x10
+fake_array3: .byte 0x10, 0x20, 0x30, 0x40, 0x50, 0x60, 0x70, 0x80, 0x90, 0xa0, 0xb0, 0xc0, 0xd0, 0xe0, 0xf0, 0x00
+fake_array4: .byte 0x0f, 0x1e, 0x2d, 0x3c, 0x4b, 0x5a, 0x69, 0x78, 0x87, 0x96, 0xa5, 0xb4, 0xc3, 0xd2, 0xe1, 0xf0
+fake_array5: .byte 0xff, 0xee, 0xdd, 0xcc, 0xbb, 0xaa, 0x99, 0x88
+
+mixed_table_ptrs:
+    .quad fake_array1
+    .quad array1
+    .quad fake_array2
+    .quad array2
+    .quad fake_array3
+    .quad array3
+    .quad fake_array4
+    .quad array4
+    .quad fake_array5
+    .quad array5
+
+success_msg: .asciz "Correct!\n"
+failure_msg: .asciz "Incorrect!\n"
+
+
+.text
+.global _start
+
+_start:
+    mov x29, sp
+    ldr x5, [sp]           // argc
+    cmp x5, #2
+    blt fail
+
+    ldr x20, [sp, #16]     // x20 = argv[1]
+    mov x21, #0
+.len_loop:
+    ldrb w7, [x20, x21]
+    cbz w7, .len_done
+    add x21, x21, #1
+    b .len_loop
+.len_done:
+    // x20 = ptr, x21 = len
+    bl encrypt
+
+    cmp w22, #0            // fail flag
+    bne fail
+
+    mov x8, #64            // write syscall
+    mov x0, #1             // stdout
+    ldr x1, =success_msg
+    mov x2, #9
+    svc #0
+    b exit
+
+fail:
+    mov x8, #64
+    mov x0, #1
+    ldr x1, =failure_msg
+    mov x2, #11
+    svc #0
+
+exit:
+    mov x8, #93
+    mov x0, #0
+    svc #0
+
+encrypt:
+    stp x29, x30, [sp, #-16]!
+    mov x29, sp
+    mov x22, #0
+    mov x23, #0
+.loop:
+    cmp x23, x21
+    bge .done
+
+    ldrb w14, [x20, x23]
+    bl perform_ror
+    mov w17, w14
+    bl xor_add
+    mov w14, w17
+    bl compare_array
+
+    add x23, x23, #1
+    b .loop
+.done:
+    ldp x29, x30, [sp], #16
+    ret
+
+perform_ror:
+    mov x15, #0
+    tst x14, #0x01
+    beq .skip0
+    orr x15, x15, #0x20
+.skip0:
+    tst x14, #0x02
+    beq .skip1
+    orr x15, x15, #0x40
+.skip1:
+    tst x14, #0x04
+    beq .skip2
+    orr x15, x15, #0x80
+.skip2:
+    tst x14, #0x08
+    beq .skip3
+    orr x15, x15, #0x01
+.skip3:
+    tst x14, #0x10
+    beq .skip4
+    orr x15, x15, #0x02
+.skip4:
+    tst x14, #0x20
+    beq .skip5
+    orr x15, x15, #0x04
+.skip5:
+    tst x14, #0x40
+    beq .skip6
+    orr x15, x15, #0x08
+.skip6:
+    tst x14, #0x80
+    beq .done_ror
+    orr x15, x15, #0x10
+.done_ror:
+    mov x14, x15
+    ret
+
+xor_add:
+    eor w17, w17, w21
+    add w17, w17, w21
+    and w17, w17, #0xff
+    ret
+
+compare_array:
+    mov x3, x23
+    lsr x3, x3, #4
+    add x3, x3, x3
+    add x3, x3, #1
+    ldr x4, =mixed_table_ptrs
+    ldr x4, [x4, x3, LSL #3]
+
+    and x5, x23, #0x0F
+    ldrb w6, [x4, x5, LSL #0]
+
+    eor w6, w6, w14
+    orr w22, w22, w6
+    ret

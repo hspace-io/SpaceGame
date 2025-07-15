@@ -1,0 +1,10 @@
+name: ObfuSWF
+category: rev
+difficulty: medium
+cpu_spec:
+mem_spec:
+port: 
+description: § find the flag in swf! §
+flag: hspace{r3v3r51ng_7h3_5wf_0bfu5c4710n_32}
+chall_dir: rev-ObfuSWF
+compose_file:

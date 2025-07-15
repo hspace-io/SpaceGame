@@ -1,0 +1,14 @@
+name: BabyHash
+category: crypto
+
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 1971
+
+description: I'm worried that I might have made the challenge too easy.
+nc {ip} {port}
+
+flag: hspace{the_hash_emperor_db1aca160fe9b9cb4c3ef1bcb2f08804}
+chall_dir: crypto-babyhash
+compose_file: crypto-babyhash/prob/for_organizer/docker-compose.yml
