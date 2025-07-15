@@ -1,4 +1,45 @@
 # SpaceGame
+## 사용법
+### 구조
+```
+Spacegame/
+├── problems/
+│   ├── Pwnable/
+│   │   ├── Beginner/
+│   │   └── Easy/
+│   │
+│   ├── Webhacking/
+│   │   ├── Beginner/
+│   │   └── Hard/
+│   │
+│   └── Reversing/
+│       ├── Medium/
+│       └── Hard/
+│
+└── solutions/
+    ├── Pwnable/
+    │   ├── Beginner/
+    │   └── Easy/
+    │
+    ├── Webhacking/
+    │   ├── Easy/
+    │   └── Medium/
+    │
+    └── Reversing/
+        ├── Medium/
+        └── Hard/
+ 
+```
+### 문제 풀이
+- `deploy_select.sh` 실행
+- 풀이하고 싶은 문제 번호 선택
+- 도커 빌드가 완료되면 각 문제별 challenge.yaml 에 적혀있는 로컬 주소에서 문제 풀이 가능
+- 하단의 테이블에서 문제 디렉토리 or 솔루션 디렉토리 이동 가능
+
+### 도커 삭제
+- `delete-docker.sh` 실행
+
+## List
 
 |   Category   |  difficulty  |                 problem                  |                                                      Link                                                     |     port     |    server    |     출제일시     |
 |--------------|--------------|------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------|--------------|------------------|
