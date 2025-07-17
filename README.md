@@ -348,6 +348,9 @@ Spacegame/
 [Weird dhke prob]: ./problems/Cryptography/Easy/Weird_dhke
 [Weird dhke sol]: ./solutions/Cryptography/Easy/Weird_dhke
 
+[simple some/ip prob]: ./problems/Cryptography/Easy/simple_some-ip
+[simple some/ip sol]: ./solutions/Cryptography/Easy/simple_some-ip
+
 <!-- Misc -->
 [READ prob]: ./problems/Misc/Easy/READ
 [READ sol]: ./solutions/Misc/Easy/READ
