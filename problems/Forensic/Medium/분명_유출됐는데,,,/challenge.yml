@@ -1,0 +1,15 @@
+name: 분명 유출됐는데...
+category: forensic
+
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 1730
+
+description: OO 회사의 직원이 기밀 정보가 포함된 문서 파일을 유출한 사건이 발생하였다. 해당 직원의 PC를 이미징하여 해당 문서를 유출한 경로를 파악하고자 한다. 그런데 문서가 정상적으로 열리지 않는 것 같다…! 유출한 경로를 파악하고 해당 문서를 정상적으로 열어서 유출된 기밀 정보 내용을 찾아내라.
+ZIP PW = 0309spacewar
+
+
+flag: SPACEWAR{@n5w3r_i5_4lw4y5_1n_the_3nd!!!!!}
+chall_dir:
+compose_file:

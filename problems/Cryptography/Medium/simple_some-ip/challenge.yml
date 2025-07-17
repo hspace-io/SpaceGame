@@ -1,0 +1,11 @@
+name: simple_some/ip
+category: crypto misc
+difficulty: medium
+cpu_spec: {cpu_spec}
+mem_spec: {mem_spec}
+port: {port}
+description: hspace{secretkey}
+
+flag: hspace{170309974604676222323022853386}
+chall_dir: X
+compose_file: X

@@ -1,0 +1,11 @@
+name: PhysicalLab-Whisperer
+category: hardware
+difficulty: medium
+cpu_spec: 1
+mem_spec: 512
+port: 55666
+description: This is a easy test for you. If you don't pass this test, who knows what might happen... I hope you check the given information and code to solve the problem. When you're unsure of your goal, watching YouTube might also help. 
+
+flag: hspace{7hi3_1s_4_pieC3_0f_c4ke}
+chall_dir: PhysicalLab-Whisperer
+compose_file: PhysicalLab-Whisperer/prob/for_organizer/docker-compose.yml

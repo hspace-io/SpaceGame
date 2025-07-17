@@ -1,0 +1,33 @@
+[DEVICE INFORMATION]
+
+# Target
+## Name: Trezor One
+## MCU: pinout 64
+
+# ChipWhisperer
+## Name: ChipWhisperer-Husky
+
+# SWD
+## Name: SWD Adapter board
+## URL: https://robotscience.kr/goods/view?no=9035
+
+# Jlink
+## Name: SEGGER J-link
+## Version: v9+
+
+# PhyWhisperer-USB
+## Name: PhyWhisperer-USB
+
+
+
+
+
+
+[MEMO]
+Your mission is to activate debug mode by performing voltage glitching on the target.
+This is a mission to check if you know how to use ChipWhisperer. 
+
+Additionally.. I recommend you to do glitching using the crowbar port. 
+You can assume that ChipWhisper's GND and Trezor's GND are connected. 
+
+

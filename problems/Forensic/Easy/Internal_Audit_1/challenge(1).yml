@@ -1,0 +1,18 @@
+name: Internal Audit 1
+category: forensic
+
+difficulty: easy
+cpu_spec: 
+mem_spec: 
+port: 
+description: |
+국내 유수의 IT 기업인 NBVER 내부 감사팀에서 나몰래 연구원이 PC를 사용해 수상한 내용의 글을 작성하는 것을 확인했다는 내부 제보를 받고 조사에 착수했다.
+나몰래 연구원의 혐의점을 밝히고, 공범자를 밝혀내라.
+
+문제 파일 비밀번호 - space1111
+
+문제 1. 유출한 문서의 이름을 찾아라
+
+flag: hspace{Naber_2024_클라우드_핵심기술}
+chall_dir: 
+compose_file: 

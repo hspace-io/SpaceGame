@@ -1,0 +1,10 @@
+name: 1-day_cve
+category: 1-day
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 4022
+description: 1-day 취약점 분석 문제입니다. 보고서 제출은 gap@dongha.xyz 로 부탁드립니다
+flag: huntingmaster{1-day_cve1-day_cve1-day_cve}
+chall_dir: 1-day_cve
+compose_file: 1-day_cve/prob/for_organizer/docker-compose.yml

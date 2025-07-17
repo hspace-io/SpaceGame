@@ -1,0 +1,11 @@
+name: u art?
+category: hardware
+difficulty: beginner
+cpu_spec: 1
+mem_spec: 512
+port: 12345
+description: gnd는 찾았는데... uu | [UART Interface 1] gnd : pin6
+
+flag: hspace{uuuuuu_uart!!_fuuuuuuun_hardware-_^}
+chall_dir: hardware-uart
+compose_file: hardware-uart/prob/for_organizer/docker-compose.yml

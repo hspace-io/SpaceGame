@@ -1,0 +1,16 @@
+name: Internal Audit 2
+category: forensic
+
+difficulty: easy
+cpu_spec: 
+mem_spec: 
+port: 
+description: |
+국내 유수의 IT 기업인 NBVER 내부 감사팀에서 나몰래 연구원이 PC를 사용해 수상한 내용의 글을 작성하는 것을 확인했다는 내부 제보를 받고 조사에 착수했다.
+나몰래 연구원의 혐의점을 밝히고, 공범자를 밝혀내라.
+
+문제 2. 나몰래 연구원의 비밀 계정을 찾아라
+
+flag: hspace{namollae.spy.13@gmail.com}
+chall_dir: 
+compose_file:

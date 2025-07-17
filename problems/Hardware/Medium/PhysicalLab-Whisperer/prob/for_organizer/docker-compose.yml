@@ -1,0 +1,5 @@
+services:
+  whisperer:
+    build: .
+    ports:
+      - "55666:55666"
