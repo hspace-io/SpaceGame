@@ -1,0 +1,16 @@
+name: Double Cast
+category: misc
+difficulty: hard
+cpu_spec: 1
+mem_spec: 512
+port: 44444
+description: |
+docker compose up --build
+어느 마법사가 여행을 하던중 전설의 용 우로보로스를 만났어요!
+그러나 다행히 마법사는 짱 세요
+만약 최강의 공격마법인 폭렬마법을 전력으로 사용한다면 우로보로스를 이길 수 있을거에요!
+우로보로스를 쓰러뜨리고 전리품을 획득하세요!
+
+flag: hspace{hsapce2024{EXPL0S1ON_i5_Alw4ys_B3autiful}} #플래그
+chall_dir: misc-doublecast #문제 폴더 (최상위 폴더 기준으로 작성)
+compose_file: misc-doublecast/for_organizer/docker-compose.yml #문제 도커 컴포즈 파일 위치 (상대 경로로 작성)

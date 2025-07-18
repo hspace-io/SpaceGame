@@ -1,0 +1,11 @@
+name: my_vm
+category: reversing
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+
+description: 특별한 값을 push 한다는데요..?
+
+flag: hspace{whAt_D0_y0u_tH1nk?_1t_WaS_a_s1mp13_VM_R1ght?}
+chall_dir: reversing-my_vm

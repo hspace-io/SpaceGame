@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    guess:
+        build:
+            context: .
+        ports:
+            - "31337:31337"
+        restart: always

@@ -1,0 +1,10 @@
+name: jsgood
+category: web
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 
+description: this is javascript
+flag: huntingmaster{8A3F6BFD0123456789ABCDEF01234567X}
+chall_dir: jsgood
+compose_file: jsgood/prob/for_organizer/docker-compose.yml

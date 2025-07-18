@@ -1,0 +1,16 @@
+name: 민간 포렌식 기업 퇴사 사건
+category: forensic
+
+difficulty: medium
+cpu_spec: 
+mem_spec: 
+port: 
+
+description: 민간 포렌식 기업에 다니던 최모씨는 퇴사하면서 자신이 사용하던 컴퓨터속 BitLocker로 암호화된 디스크의 키를 의도적으로 와이핑한 후 퇴사하였다.
+회사는 이를 빠르게 파악하여 삭제한 직후 해당 컴퓨터의 메모리를 덤프하여 확보하였고, 해당 퇴사자와는 연락이 닿지 않는 상황이다.
+당신은 암호화된 디스크속 자료를 찾아 플래그를 획득해야한다.
+ZIP PW = 5p4c3w42 15 begin!!!
+
+flag: SPACEWAR{f0r3n51c5 15 v3ry d1v3r53!!!}
+chall_dir:
+compose_file:

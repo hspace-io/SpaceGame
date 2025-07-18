@@ -1,0 +1,12 @@
+name: permutation
+category: rev
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+
+description: |
+  and transposition
+
+flag: hspace{dtrm1nnt}
+chall_dir: rev-permutation

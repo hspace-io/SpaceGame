@@ -1,0 +1,15 @@
+name: Get-Flag-From-Space 
+category: Forensics
+
+difficulty: Beginner
+cpu_spec: None
+mem_spec: None
+port: None
+Password: f+space!1234
+
+description: The user deleted the RansomNoe. However, we still need to get the attacker's email address and Flag
+Flag Input : hspace{attack's email_Flag}
+
+flag: hspace{space@onion.mail_nIce_Y0u_C@tch_F!ag}
+chall_dir: Get-Flag-From-Space
+compose_file: none

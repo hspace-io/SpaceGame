@@ -1,0 +1,10 @@
+name: p-shell
+category: pwn
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 18775
+description: 
+flag: hspace{7161370bc3c6913b7abce4607f299e50bcd5f1bb6473e7b62c7ea412ca75bf88} #플래그
+chall_dir: pwn-p_shell #문제 폴더 (최상위 폴더 기준으로 작성)
+compose_file: pwn-p_shell/prob/for_organizer/docker-compose.yml #문제 도커 컴포즈 파일 위치 (상대 경로로 작성)

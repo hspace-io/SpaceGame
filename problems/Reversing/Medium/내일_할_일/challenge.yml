@@ -1,0 +1,14 @@
+name: 내일 할 일 
+category: rev 
+difficulty: tomorrow
+
+cpu_spec:
+mem_spec: 
+port: 
+
+description: |
+내일 할 일 생성기를 만들었어요
+flag: hspace{lcglcglcglcg_aesaesaesaes_mixmixmixmix_6abbbab614f73b5297fa1da6b1c3169fdb26b7df969f63faad}
+chall_dir: rev-planner
+
+compose_file: 

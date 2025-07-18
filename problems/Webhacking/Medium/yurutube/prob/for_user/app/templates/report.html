@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cozy Report Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", Arial, sans-serif;
+            background-color: #f8ecdc;
+            color: #594a41;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(45deg, #f8ecdc 90%, #ffdfd0 100%);
+        }
+
+        .header {
+            width: 100%;
+            background-color: rgba(255, 250, 245, 0.95);
+            padding: 1.2rem;
+            box-shadow: 0 2px 12px rgba(210, 165, 130, 0.2);
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 3px solid #ffd4bc;
+        }
+
+        .logo {
+            height: 45px;
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(210, 165, 130, 0.15);
+            border: 2px solid #ffd4bc;
+        }
+
+        h2 {
+            color: #453832;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            border: 3px solid #ffd4bc;
+            border-radius: 25px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #594a41;
+            transition: all 0.3s ease;
+            outline: none;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ffb499;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(255, 180, 153, 0.2);
+        }
+
+        input[type="text"]::placeholder {
+            color: #b4a198;
+        }
+
+        input[type="submit"] {
+            padding: 12px 30px;
+            background-color: #ffd4bc;
+            color: #594a41;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #ffd4bc;
+            font-family: inherit;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffb499;
+            border-color: #ffb499;
+            transform: translateY(-2px);
+        }
+
+        .success-msg {
+            color: #4a8d7c;
+            background-color: #e8f5f1;
+            padding: 12px 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border: 2px solid #4a8d7c;
+        }
+
+        .fail-msg {
+            color: #c25450;
+            background-color: #fdf1f0;
+            padding: 12px 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border: 2px solid #c25450;
+        }
+
+        .camping-decoration {
+            margin-top: 2rem;
+            color: #ffb499;
+            opacity: 0.7;
+            font-size: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 20px;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+    </div>
+    <div class="form-container">
+        <h2>Report Page</h2>
+        {% if msg %}
+            {% if msg == 'success' %}
+                <p class="success-msg">
+                    <i class="fas fa-check-circle"></i>
+                    Successfully visited the URL!
+                </p>
+            {% elif msg == 'fail' %}
+                <p class="fail-msg">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Failed to visit the URL.
+                </p>
+            {% endif %}
+        {% endif %}
+        <form action="/report" method="POST">
+            <div class="input-container">
+                <input type="text" name="url" placeholder="Enter URL to report" required>
+            </div>
+            <input type="submit" value="Submit Report">
+        </form>
+    </div>
+    <div class="camping-decoration">
+        <i class="fas fa-campground"></i>
+    </div>
+</body>
+</html>

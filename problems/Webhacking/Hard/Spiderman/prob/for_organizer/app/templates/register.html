@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background-color: #121212; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .container { width: 100%; max-width: 400px; padding: 2rem; background-color: #1a1a2e; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); }
+        .container h2 { margin-bottom: 1rem; color: #d63447; text-align: center; }
+        .input-field { width: 100%; padding: 0.75rem; margin-bottom: 1rem; background-color: #2e2e2e; color: #fff; border: none; border-radius: 8px; }
+        .btn { width: 100%; padding: 0.75rem; background-color: #d63447; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+        .btn:hover { background-color: #b12b3b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="{{ url_for('register') }}" method="POST">
+            <input class="input-field" type="text" id="id" name="id" placeholder="id" required>
+            <input class="input-field" type="password" id="pw" name="pw" placeholder="pw" required>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>

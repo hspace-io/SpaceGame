@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row m-4">
+            <div>
+                <img src="/static/img/roulette_text.png" height="70"/>
+            </div>
+            <div class="col-md-12">
+                <img src="/static/img/roulette_{{ result }}.png" alt="roulette">
+                {% if win %}
+                <h2>You win!</h2>
+                {% else %}
+                <h2>You lose!</h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

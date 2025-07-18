@@ -1,0 +1,10 @@
+name: ZeroSuperTigerDomain(working title)
+category: pwn
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 15252
+description: I don't know what it is..
+flag: hspace{v3Ry_34sY_st@CK_boF}
+chall_dir: zerosupertigerdomain
+compose_file: zerosupertigerdomain/prob/for_organizer/docker-compose.yml

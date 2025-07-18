@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>게시물 수정</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>게시물 수정</h1>
+        <a href="/posts/<%= post.id %>" class="btn btn-secondary mb-3">돌아가기</a>
+        
+        <form action="/posts/<%= post.id %>/edit" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">제목</label>
+                <input type="text" class="form-control" id="title" name="title" value="<%= post.title %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">내용</label>
+                <textarea class="form-control" id="content" name="content" rows="10" required><%= post.content %></textarea>
+            </div>
+            <div class="mb-3">
+                <input type="checkbox" id="isPublic" name="isPublic" <%= post.is_public === 1 ? 'checked' : '' %>>
+                <label for="isPublic">공개</label>
+            </div>
+            <button type="submit" class="btn btn-primary">수정</button>
+        </form>
+    </div>
+</body>
+</html> 

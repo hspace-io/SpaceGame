@@ -1,0 +1,13 @@
+name: pwn101
+category: pwn
+difficulty: medium
+cpu_spec: 1 # cpu spec - core
+mem_spec: 4096 # memory spec - mb
+port: 8080
+description: |
+nc {ip} {port}
+this is description
+Welcome to pwn101 session. 
+flag: hspace{what_if_there_was_only_one_note_and_two_commands} #플래그
+chall_dir: pwn-pwn101 #문제 폴더 (최상위 폴더 기준으로 작성)
+compose_file: pwn-pwn101/for_organizer/docker-compose.yml #문제 도커 컴포즈 파일 위치 (상대 경로로 작성)

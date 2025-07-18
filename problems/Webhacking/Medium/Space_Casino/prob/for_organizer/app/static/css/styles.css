@@ -1,0 +1,24 @@
+/* CSS Document */
+body{padding:0px; margin:0px; background:#171717; color:#FFF; font:24px Tahoma, Geneva, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+@font-face {
+    font-family: Casino;
+    src: url(../fonts/CasinoShadow.ttf) format("truetype");
+}
+
+@keyframes blink {
+    90% {
+        text-shadow: 0 0 2px yellow;
+    }
+}
+
+.home {
+    font-family: Casino;
+    font-size: 80px;
+    background: -webkit-linear-gradient( rgb(255, 215, 17), rgb(255, 232, 232));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: blink 1s step-end infinite;
+}

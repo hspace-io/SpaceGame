@@ -1,0 +1,16 @@
+name: Password Guessing
+category: Hardware
+difficulty: hard
+cpu_spec: 2
+mem_spec: 1024
+port: 31337
+description: 
+'''
+Please guess password
+
+Password Rule : Only lowercase letters and numbers.
+'''
+
+flag: hspace{TheK3YWAS_S1DECHANNELATT4CK!}
+chall_dir: password_guessing
+compose_file: password_guessing/prob/for_organizer/docker-compose.yml

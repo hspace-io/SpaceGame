@@ -1,0 +1,29 @@
+services:
+  app:
+    build: ./app
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      SECRET_KEY: ${SECRET_KEY}
+      FLAG: hspace{185e8baadeab41ab52470e2b4a9a511a8a72b4601fd091a5}
+    links:
+      - db
+    ports:
+      - "5000:5000"
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    restart: always
+    networks:
+      - default

@@ -1,0 +1,9 @@
+version: '3'
+services:
+    uaf_basic:
+        container_name: uaf_basic
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "4021:4021"

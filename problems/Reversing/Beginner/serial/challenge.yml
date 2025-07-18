@@ -1,0 +1,10 @@
+name: serial
+category: rev
+
+difficulty: Beginner
+cpu_spec: 1
+mem_spec: 512
+
+description: Find out what 'name' is, and what 'serial' number the name identifier has. 
+flag: hspace{AUyA104101108108111}
+chall_dir: rev-serial

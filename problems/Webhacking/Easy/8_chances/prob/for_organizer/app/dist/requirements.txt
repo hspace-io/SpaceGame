@@ -1,0 +1,5 @@
+Flask==3.0.3
+requests
+Werkzeug==3.0.4
+pymysql
+cryptography

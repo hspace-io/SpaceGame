@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "One's Blog",
+  "main": "app/src/server.js",
+  "scripts": {
+    "start": "node app/src/server.js",
+    "dev": "nodemon app/src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "uuid": "^9.0.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "puppeteer-core": "^21.5.2",
+    "jsonwebtoken": "^9.0.0",
+    "method-override": "^3.0.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

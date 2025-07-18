@@ -1,0 +1,10 @@
+name: simple_note
+category: web
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 8000
+description: exploit may not work all at once
+flag: huntingmaster{wow~~~good~~~}
+chall_dir: soeasy
+compose_file: web-soeasy/prob/for_organizer/docker-compose.yml

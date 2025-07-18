@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    robot:
+        build:
+            context: .
+        ports:
+            - "4997:4997"
+        restart: always
+

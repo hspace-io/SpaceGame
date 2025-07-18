@@ -1,0 +1,12 @@
+name: Find Answer
+category: rev
+
+difficulty: easy
+cpu_spec: 1
+mem_spec: 512
+port: 23456
+
+decription: Find way to get answer.
+
+flag: huntingmaster{vrwX9Tx&y*e8'aYdq&$'t$(kCN6<TI)@gxj5&Esddq.b2}
+chall_dir: find_answer

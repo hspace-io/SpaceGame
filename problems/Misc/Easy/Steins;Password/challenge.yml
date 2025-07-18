@@ -1,0 +1,16 @@
+name: Steins;Password
+category: misc
+
+difficulty: easy
+cpu_spec: 0
+mem_spec: 0
+port: 0
+
+description: |
+  마키세 크리스가 개인키를 이차원 공간에서 잃어버렸다고 합니다...
+  내일 발표할 자료가 담긴 중요한 컴퓨터라 당신에게 파일 찾기를 의뢰했다고 하네요!
+  파일을 찾고 크리스에게 돌려주세요
+
+flag: hspace{d0nt_l34ve_pw_1n_an0ther_dim}
+chall_dir:
+compose_file:

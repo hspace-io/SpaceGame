@@ -1,0 +1,16 @@
+name: 컴퓨터가 이상해
+category: forensic
+
+difficulty: begginer
+cpu_spec: 
+mem_spec: 
+port: 
+
+description: G씨는 평소와 같이 컴퓨터를 이용하던중, 갑작스럽게 이상한 창이 떴다가 사라지는 등의 이상 현상을 발견하게 된다. 
+해당 PC를 조사해서 1. 공격자가 사용하는 PC의 이름은 무엇인지, 2. 공격자의 IP는 무엇인지, 3. 공격자의 유입경로 주소가 어디인지를 알아내야 한다.
+1, 2, 3의 정답을 언더바(_)로 구분해 인증
+ZIP PW = SP@CEWAR987654321!!!!
+
+flag: SPACEWAR{jjanghacker_172.30.1.63_divorcee_napping947@simplelogin.com}
+chall_dir:
+compose_file:

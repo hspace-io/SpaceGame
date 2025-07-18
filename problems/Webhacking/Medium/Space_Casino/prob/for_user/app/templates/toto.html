@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row m-4">
+            <div>
+                <img src="/static/img/toto.png" height="70"/>
+            </div>
+            <div class="col-md-12">
+                <h1>Partner's League toto</h1>
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+                <div class="row">
+                    {% for team in teams %}
+                    <div class="col-md-6">
+                        <h2>{{ team[0] }}</h2>
+                        <div>
+                            {{ (team[1] * 100 / bets) | round(3) }}%
+                        </div>
+                        <form action="toto" method="post">
+                            <input type="hidden" name="team" value="{{ team[0] }}">
+                            <input type="number" name="bet" value="10">
+                            <input type="submit">
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

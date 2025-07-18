@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row m-4">
+            <div>
+                <img src="/static/img/login.png" height="70"/>
+            </div>
+            <div class="col-md-12">
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+                <form action="login" method="post">
+                    <div class="mb-3">
+                        <label for="userid" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="userid" name="userid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

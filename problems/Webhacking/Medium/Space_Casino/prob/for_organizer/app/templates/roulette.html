@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row m-4">
+            <div>
+                <img src="/static/img/roulette_text.png" height="70"/>
+            </div>
+            <div class="col-md-12">
+                <img src="/static/img/roulette.png" alt="roulette">
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+                <form action="roulette" method="post">
+                    <div class="mb-3">
+                        <label for="bet" class="form-label">Bet</label>
+                        <input type="number" class="form-control" id="bet" name="bet" placeholder="Enter bet amount">
+                    </div>
+                    <div class="mb-3">
+                        <label for="rb" class="form-label">Red or Black</label>
+                        <select class="form-select" id="rb" name="rb">
+                            <option value="red">Red</option>
+                            <option value="black">Black</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

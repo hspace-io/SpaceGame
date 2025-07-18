@@ -1,0 +1,16 @@
+name: Surprising Painful Infrastructure
+category: reversing, crypto, Hardware
+difficulty: hard
+cpu_spec: {1}
+mem_spec: {1}
+port: {5678}
+description:
+A member of Physical Lab has implemented communication very similar to SPI.
+He set up a basic master-slave relationship and left a few hints through the process of exchanging [data.It](http://data.it/) seems that, although he enjoys hacking, he's not very good at development, so the key settings were somewhat incomplete.
+The slave device and the master communicate with each other, and clues to finding the flag are hidden within the responses. Understand the basic principles of SPI communication and input the data according to the given conditions to read the flag. All necessary information is included in the slave device's responses and the provided file, so examine them carefully.
+
+nc pwnable.co.kr 5678
+
+flag: hspace{SP!_SP1_SPi_SPI_SPl_SP!_SPeye_SPchild_SPAI}
+chall_dir: none
+compose_file: none

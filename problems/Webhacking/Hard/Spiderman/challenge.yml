@@ -1,0 +1,13 @@
+name: Spiderman
+category: web
+
+difficulty: hard
+cpu_spec: 1
+mem_spec: 512
+port: 44444
+
+description: Spiderman? No Way Home
+
+flag: hspace{With_great_power_comes_great_responsibility...}
+chall_dir: web-spiderman
+compose_file: web-spiderman/prob/for_organizer/docker-compose.yml

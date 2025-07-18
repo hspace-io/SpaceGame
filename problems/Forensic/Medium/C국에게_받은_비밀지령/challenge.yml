@@ -1,0 +1,16 @@
+name: C국에게 받은 비밀지령
+category: forensic
+
+difficulty: medium
+cpu_spec: 
+mem_spec: 
+port: 
+
+description: A씨가 C국과 내통을 하고있다는 사실을 안 정보국에서 A씨의 PC를 압수수색하였다. 
+수사 중 A씨는 협업프로그램을 활용해 지령을 전달받은 점을 확인했다. 
+A씨가 받은 파일과 파일 내 지령을 획득하라.
+ZIP PW = TOTHESPACEEEEE
+
+flag: SPACEWAR{It_is_dark_under_the_lamp}
+chall_dir: 
+compose_file: 
