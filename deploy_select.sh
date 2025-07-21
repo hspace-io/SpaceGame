@@ -1,13 +1,12 @@
 #!/bin/bash
 
 echo "Available Problems:"
-find problems -mindepth 3 -maxdepth 3 -type d | sed 's|problems/||' | sort |nl
+find challenges -mindepth 3 -maxdepth 3 -type d | sed 's|challenges/||' | sort |nl
 
 echo ""
 read -p "Enter problem number to build : " -a nums
 
-mapfile -t all_paths < <(find problems -mindepth 3 -maxdepth 3 -type d | sort)
-
+mapfile -t all_paths < <(find challenges -mindepth 3 -maxdepth 3 -type d | sort)
 
 echo ${all_paths[nums-1]}
 cd ${all_paths[nums-1]}
