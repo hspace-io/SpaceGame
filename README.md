@@ -3,7 +3,7 @@
 ### 구조
 ```
 Spacegame/
-├── problems/
+├── challenges/
 │   ├── Pwnable/
 │   │   ├── Beginner/
 │   │   └── Easy/
