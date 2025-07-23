@@ -1,7 +1,7 @@
 #!/bin/bash
 
-top_dirs=("problems" "solutions")
-category=("1-day" "Cryptography" "Forensic" "Hardware" "Misc" "Pwnable" "Reversing" "Webhacking" )
+top_dirs=("challenges" "solutions")
+category=("1-day" "Cryptography" "Forensic" "Hardware" "Misc" "Pwnable" "Reversing" "Webhacking")
 
 Difficulty=("Easy" "Beginner" "Medium" "Hard")
 
