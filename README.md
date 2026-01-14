@@ -1,7 +1,6 @@
 # SpaceGame
 ## 사용법
 
-```
 ### 문제 풀이
 - `deploy_select.sh` 실행
 - 풀이하고 싶은 문제 번호 선택
