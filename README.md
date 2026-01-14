@@ -1,34 +1,6 @@
 # SpaceGame
 ## 사용법
-### 구조
-```
-Spacegame/
-├── challenges/
-│   ├── Pwnable/
-│   │   ├── Beginner/
-│   │   └── Easy/
-│   │
-│   ├── Webhacking/
-│   │   ├── Beginner/
-│   │   └── Hard/
-│   │
-│   └── Reversing/
-│       ├── Medium/
-│       └── Hard/
-│
-└── solutions/
-    ├── Pwnable/
-    │   ├── Beginner/
-    │   └── Easy/
-    │
-    ├── Webhacking/
-    │   ├── Easy/
-    │   └── Medium/
-    │
-    └── Reversing/
-        ├── Medium/
-        └── Hard/
- 
+
 ```
 ### 문제 풀이
 - `deploy_select.sh` 실행
